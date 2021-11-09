@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.prod.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "exclude": ["**/dist/**/*"],
+  "include": [
+    "scripts/*.ts",
+    "src/**/*.ts",
+    "tests/**/*.ts",
+    "index.ts",
+    ".eslintrc.js",
+    ".prettierrc.js",
+    "commitlint.config.js"
+  ]
+}

@@ -1,0 +1,15 @@
+# Node Modules
+node_modules/
+**/*.js
+!.commitlintrc.js
+!.eslintrc.js
+!.prettierrc.js
+**/*.d.ts
+.idea/
+.eslintcache
+yarn-error.log
+
+# Coverage
+.nyc_output/
+coverage/
+reports/
