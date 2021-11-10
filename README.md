@@ -1,6 +1,6 @@
 # eslint-plugin-es-roikoren
 
-[![Test Status](https://github.com/roikoren755/eslint-plugin-es/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/roikoren755/eslint-plugin-es/actions/workflows/test.yml?query=branch%3Amain)
+[![Test Status](https://github.com/roikoren755/eslint-plugin-es/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/roikoren755/eslint-plugin-es/actions/workflows/ci.yml?query=branch%3Amain)
 [![codecov](https://codecov.io/gh/roikoren755/eslint-plugin-es/branch/main/graph/badge.svg?token=RF5L5KQQN6)](https://codecov.io/gh/roikoren755/eslint-plugin-es)
 
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=roikoren755_eslint-plugin-es&metric=bugs)](https://sonarcloud.io/dashboard?id=roikoren755_eslint-plugin-es)
@@ -129,6 +129,7 @@ This plugin never reports prototype methods by default. Because it's hard to kno
 If you configured the `aggressive` mode, this plugin reports prototype methods even if the rules couldn't know the type of objects.
 For example:
 
+`settings.es.aggressive = true` means the aggressive mode.
 ```json
 {
   "plugins": ["es-roikoren"],
@@ -136,7 +137,6 @@ For example:
     "es-roikoren/no-string-prototype-codepointat": "error"
   },
 
-  // `settings.es.aggressive = true` means the aggressive mode.
   "settings": {
     "es": { "aggressive": true }
   }
@@ -156,10 +156,22 @@ For example:
   "rules": {
     "es-roikoren/no-string-prototype-codepointat": "error"
   }
-  
-  // If you configured the `aggressive` mode, this plugin reports prototype methods on `any` types as well.
-  // "settings": {
-  //   "es": { "aggressive": true }
-  // }
+}
+```
+
+If you configured the `aggressive` mode, this plugin reports prototype methods on `any` types as well.
+```json
+{
+  "plugins": ["es-roikoren"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "rules": {
+    "es-roikoren/no-string-prototype-codepointat": "error"
+  },
+  "settings": {
+    "es": { "aggressive": true }
+  }
 }
 ```
