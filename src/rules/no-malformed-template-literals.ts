@@ -17,9 +17,9 @@ export default createRule<[], 'forbidden'>({
 
     return {
       'TemplateElement[value.cooked=null]'(elementNode: TSESTree.TemplateElement) {
-        const node = elementNode.parent as TSESTree.Node;
+        const node = elementNode.parent;
 
-        if (!reported.has(node)) {
+        if (node && !reported.has(node)) {
           reported.add(node);
           context.report({ node, messageId: 'forbidden' });
         }

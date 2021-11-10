@@ -37,11 +37,11 @@ export default createRule<[], 'forbidden'>({
       const keyText = sourceCode.text.slice(firstKeyToken?.range[0], lastKeyToken?.range[1]);
       let functionHeader = 'function';
 
-      if ((node.value as TSESTree.FunctionExpression).async) {
+      if ('async' in node.value && node.value.async) {
         functionHeader = `async ${functionHeader}`;
       }
 
-      if ((node.value as TSESTree.FunctionExpression).generator) {
+      if ('generator' in node.value && node.value.generator) {
         functionHeader = `${functionHeader}*`;
       }
 
@@ -55,13 +55,15 @@ export default createRule<[], 'forbidden'>({
       'ObjectExpression > :matches(Property[method=true], Property[shorthand=true])'(
         node: TSESTree.PropertyNonComputedName,
       ) {
-        context.report({
-          node,
-          messageId: 'forbidden',
-          fix: node.method
-            ? (fixer) => makeFunctionLongform(fixer, node)
-            : (fixer) => fixer.insertTextAfter(node.key, `: ${(node.key as TSESTree.Identifier).name}`),
-        });
+        if (node.method || 'name' in node.key) {
+          context.report({
+            node,
+            messageId: 'forbidden',
+            fix: node.method
+              ? (fixer) => makeFunctionLongform(fixer, node)
+              : (fixer) => fixer.insertTextAfter(node.key, `: ${'name' in node.key ? node.key.name : ''}`),
+          });
+        }
       },
     };
   },

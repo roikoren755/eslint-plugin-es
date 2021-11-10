@@ -32,7 +32,7 @@ jobs:
 
     strategy:
       matrix:
-        eslint: [4, 5, 6, 7, 8]
+        eslint: [5, 6, 7, 8]
         node: [12, 14, 16]
         os: [ubuntu-latest]
         include:
@@ -55,7 +55,7 @@ jobs:
       - name: Install Packages
         run: yarn install --frozen-lockfile
       - name: Install ESLint ${{ matrix.eslint }}
-        run: yarn add eslint@${{ matrix.eslint }}
+        run: yarn add eslint@${{ matrix.eslint }} -D
       - name: Test
         run: yarn test
       - name: Coverage

@@ -4,12 +4,12 @@ import { AST_NODE_TYPES } from '@typescript-eslint/types';
 import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-regexp-unicode-property-escapes-2019';
 
-const error = (options?: { value?: string; notLiteral?: boolean }): TSESLint.TestCaseError<'forbidden'> => ({
-  messageId: 'forbidden',
-  line: 1,
-  type: options?.notLiteral ? AST_NODE_TYPES.NewExpression : AST_NODE_TYPES.Literal,
-  data: { value: `\\p{${options?.value ? `Script=${options.value}` : 'Extended_Pictographic'}}` },
-});
+const error = (options?: { value?: string; notLiteral?: boolean }): TSESLint.TestCaseError<'forbidden'> => {
+  const value = options?.value ? `Script=${options.value}` : 'Extended_Pictographic';
+  const type = options?.notLiteral ? AST_NODE_TYPES.NewExpression : AST_NODE_TYPES.Literal;
+
+  return { messageId: 'forbidden', line: 1, type, data: { value: `\\p{${value}}` } };
+};
 
 if (!RuleTester.isSupported(2019)) {
   console.log('Skip the tests of no-regexp-unicode-property-escapes-2019.');

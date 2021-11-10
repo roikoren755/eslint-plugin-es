@@ -39,7 +39,7 @@ const rules: IRule[] = [];
   for (const entry of readdirSync(dirPath, { withFileTypes: true })) {
     if (entry.isDirectory()) {
       walk(path.join(dirPath, entry.name));
-      // eslint-disable-next-line no-continue
+
       continue;
     }
 

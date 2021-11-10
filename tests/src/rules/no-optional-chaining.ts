@@ -1,9 +1,16 @@
-import { AST_TOKEN_TYPES } from '@typescript-eslint/types';
+// import { AST_TOKEN_TYPES } from '@typescript-eslint/types';
 
 import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-optional-chaining';
 
-const error = { messageId: 'forbidden' as const, line: 1, type: AST_TOKEN_TYPES.Punctuator, data: {} };
+const error = {
+  messageId: 'forbidden' as const,
+  line: 1,
+  // TODO - type should be AST_TOKEN_TYPES.Punctuator, but it doesn't return as such in eslint@6
+  // TODO - we should revert this change when dropping support for eslint@6
+  // type: AST_TOKEN_TYPES.Punctuator,
+  data: {},
+};
 
 if (!RuleTester.isSupported(2020)) {
   console.log('Skip the tests of no-optional-chaining.');

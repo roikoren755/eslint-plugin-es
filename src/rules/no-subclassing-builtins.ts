@@ -1,5 +1,4 @@
 import { ASTUtils } from '@typescript-eslint/experimental-utils';
-import type { TSESTree } from '@typescript-eslint/typescript-estree';
 
 import { createRule } from '../util/create-rule';
 
@@ -30,7 +29,7 @@ export default createRule<[], 'forbidden'>({
           Set: { [ASTUtils.ReferenceTracker.READ]: true },
           String: { [ASTUtils.ReferenceTracker.READ]: true },
         })) {
-          if (node.parent?.type.startsWith('Class') && (node.parent as TSESTree.ClassExpression).superClass === node) {
+          if (node.parent?.type.startsWith('Class') && 'superClass' in node.parent && node.parent.superClass === node) {
             context.report({ node, messageId: 'forbidden', data: { name: path.join('.') } });
           }
         }
