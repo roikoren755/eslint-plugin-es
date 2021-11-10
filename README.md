@@ -1,6 +1,7 @@
 # eslint-plugin-es-roikoren
 
 [![Test Status](https://github.com/roikoren755/eslint-plugin-es/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/roikoren755/eslint-plugin-es/actions/workflows/test.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/roikoren755/eslint-plugin-es/branch/main/graph/badge.svg?token=RF5L5KQQN6)](https://codecov.io/gh/roikoren755/eslint-plugin-es)
 
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=roikoren755_eslint-plugin-es&metric=bugs)](https://sonarcloud.io/dashboard?id=roikoren755_eslint-plugin-es)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=roikoren755_eslint-plugin-es&metric=code_smells)](https://sonarcloud.io/dashboard?id=roikoren755_eslint-plugin-es)
