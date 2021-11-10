@@ -189,9 +189,10 @@ There are multiple configs that enable all rules in this category: `plugin:es-ro
 | [es-roikoren/no-array-prototype-reduceright](./no-array-prototype-reduceright.md) | disallow the `Array.prototype.reduceRight` method. |  |
 | [es-roikoren/no-array-prototype-some](./no-array-prototype-some.md) | disallow the `Array.prototype.some` method. |  |
 | [es-roikoren/no-date-now](./no-date-now.md) | disallow the `Date.now` method. |  |
+| [es-roikoren/no-function-prototype-bind](./no-function-prototype-bind.md) | disallow the `Function.prototype.bind` method. |  |
 | [es-roikoren/no-json](./no-json.md) | disallow the `JSON` class. |  |
 | [es-roikoren/no-keyword-properties](./no-keyword-properties.md) | disallow reserved words as property names. |  |
-| [es-roikoren/no-object-create](./no-object-create.md) | disallow the `Object.create` method |  |
+| [es-roikoren/no-object-create](./no-object-create.md) | disallow the `Object.create` method. |  |
 | [es-roikoren/no-object-defineproperties](./no-object-defineproperties.md) | disallow the `Object.defineProperties` method. |  |
 | [es-roikoren/no-object-defineproperty](./no-object-defineproperty.md) | disallow the `Object.defineProperty` method. |  |
 | [es-roikoren/no-object-freeze](./no-object-freeze.md) | disallow the `Object.freeze` method. |  |

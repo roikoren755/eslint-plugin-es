@@ -56,6 +56,7 @@ import noDynamicImport from './rules/no-dynamic-import';
 import noExponentialOperators from './rules/no-exponential-operators';
 import noExportNsFrom from './rules/no-export-ns-from';
 import noForOfLoops from './rules/no-for-of-loops';
+import noFunctionPrototypeBind from './rules/no-function-prototype-bind';
 import noGenerators from './rules/no-generators';
 import noGlobalThis from './rules/no-global-this';
 import noImportMeta from './rules/no-import-meta';
@@ -223,6 +224,7 @@ export default {
     'no-exponential-operators': noExponentialOperators,
     'no-export-ns-from': noExportNsFrom,
     'no-for-of-loops': noForOfLoops,
+    'no-function-prototype-bind': noFunctionPrototypeBind,
     'no-generators': noGenerators,
     'no-global-this': noGlobalThis,
     'no-import-meta': noImportMeta,

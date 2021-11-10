@@ -1,5 +1,5 @@
 # es-roikoren/no-object-create
-> disallow the `Object.create` method
+> disallow the `Object.create` method.
 
 - ✅ The following configurations enable this rule: `plugin:es-roikoren/no-new-in-es5` and `plugin:es-roikoren/restrict-to-es3`
 

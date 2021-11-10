@@ -8,7 +8,7 @@ export default createRule<[], 'forbidden'>({
   name: 'no-object-create',
   meta: {
     type: 'problem',
-    docs: { description: 'disallow the `Object.create` method', recommended: false },
+    docs: { description: 'disallow the `Object.create` method.', recommended: false },
     schema: [],
     messages: { forbidden: "ES5 '{{name}}' method is forbidden." },
   },

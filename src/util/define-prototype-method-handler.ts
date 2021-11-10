@@ -120,6 +120,40 @@ const isUnionOrIntersection = (type: TypeScript.Type): type is TypeScript.UnionO
  */
 const isUnknown = (type: TypeScript.Type): boolean => (type.flags & (ts as TS).TypeFlags.Unknown) !== 0; // eslint-disable-line no-bitwise
 
+/**
+ * Check if a given type is `function` or not.
+ * @param {TypeScript.Type} type The type to check.
+ * @returns {boolean} `true` if the type is `function`.
+ */
+const isFunction = (type: TypeScript.Type): boolean => {
+  // eslint-disable-next-line no-bitwise
+  if (type.symbol && (type.symbol.flags & ((ts as TS).SymbolFlags.Function | (ts as TS).SymbolFlags.Method)) !== 0) {
+    return true;
+  }
+
+  const signatures = type.getCallSignatures();
+
+  return signatures.length > 0;
+};
+
+/**
+ * Check if the symbol.escapedName of the given type is expected or not.
+ * @param {TypeScript.InterfaceType} type The type to check.
+ * @param {string} className The expected type name.
+ * @returns {boolean} `true` if should disallow it.
+ */
+const typeSymbolEscapedNameEquals = (type: TypeScript.InterfaceType, className: string): boolean => {
+  const { escapedName } = type.symbol;
+
+  return (
+    escapedName === className ||
+    // ReadonlyArray, ReadonlyMap, ReadonlySet
+    escapedName === `Readonly${className}` ||
+    // CallableFunction
+    (className === 'Function' && escapedName === 'CallableFunction')
+  );
+};
+
 interface IOptions {
   aggressive: boolean;
   checker?: TypeScript.TypeChecker | undefined;
@@ -162,6 +196,10 @@ const getConstraintType = (
  * @returns {boolean} `true` if should disallow it.
  */
 const typeEquals = (type: TypeScript.Type, className: string, options: IOptions): boolean => {
+  if (isFunction(type)) {
+    return className === 'Function';
+  }
+
   if (isAny(type) || isUnknown(type)) {
     return options.aggressive;
   }
@@ -198,9 +236,7 @@ const typeEquals = (type: TypeScript.Type, className: string, options: IOptions)
   }
 
   if (isClassOrInterface(type)) {
-    const name = type.symbol.escapedName;
-
-    return name === className || name === `Readonly${className}`;
+    return typeSymbolEscapedNameEquals(type, className);
   }
 
   return options.checker?.typeToString(type) === className;
@@ -275,6 +311,13 @@ const checkObjectType = (memberAccessNode: TSESTree.MemberExpression, className:
     memberAccessNode.object.type === 'TemplateLiteral'
   ) {
     return className === 'String';
+  }
+
+  if (
+    memberAccessNode.object.type === 'FunctionExpression' ||
+    memberAccessNode.object.type === 'ArrowFunctionExpression'
+  ) {
+    return className === 'Function';
   }
 
   // Test object type.

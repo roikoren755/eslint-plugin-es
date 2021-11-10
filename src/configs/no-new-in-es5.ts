@@ -17,6 +17,7 @@ export default {
     'es-roikoren/no-array-prototype-reduceright': 'error',
     'es-roikoren/no-array-prototype-some': 'error',
     'es-roikoren/no-date-now': 'error',
+    'es-roikoren/no-function-prototype-bind': 'error',
     'es-roikoren/no-json': 'error',
     'es-roikoren/no-keyword-properties': 'error',
     'es-roikoren/no-object-create': 'error',
