@@ -27,9 +27,9 @@
 A re-implementation of `eslint-plugin-es` in TypeScript.
 
 ## Disclaimer
-First off, I would like to deeply thank [@mistycatea](https://github.com/mysticatea) and everyone else involved in the original `eslin-plugin-es`. None of this would have been possible without them, and all credit should go to them.
+First off, I would like to deeply thank [@mistycatea](https://github.com/mysticatea) and everyone else involved in the original `eslint-plugin-es`. None of this would have been possible without them, and all credit should go to them.
 
-This package is an attempt to migrate `eslint-config-es` to be written in TypeScript, and to use the great [`@typescript-eslint`](https://github.com/typescript-eslint) repository for plugin development.
+This package is an attempt to migrate `eslint-plugin-es` to be written in TypeScript, and to use the great [`@typescript-eslint`](https://github.com/typescript-eslint) repository for plugin development.
 
 Below is taken verbatim from [`eslint-plugin-es`](https://github.com/mysticatea/eslint-plugin-es), and will be updated as needed.
 
