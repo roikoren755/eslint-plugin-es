@@ -28,5 +28,5 @@ foo && foo()
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.2/src/rules/no-optional-chaining.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.2/tests/src/rules/no-optional-chaining.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.3/src/rules/no-optional-chaining.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.3/tests/src/rules/no-optional-chaining.ts)

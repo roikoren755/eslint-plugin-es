@@ -1,5 +1,11 @@
 # eslint-plugin-es-roikoren
 
+## 0.0.3
+
+### Patch Changes
+
+- [#8](https://github.com/roikoren755/eslint-plugin-es/pull/8) [`652ddf3`](https://github.com/roikoren755/eslint-plugin-es/commit/652ddf3d259eb20382cf2fd5414dcb50f890da5a) Thanks [@roikoren755](https://github.com/roikoren755)! - fix: finally fix publish
+
 ## 0.0.2
 
 ### Patch Changes

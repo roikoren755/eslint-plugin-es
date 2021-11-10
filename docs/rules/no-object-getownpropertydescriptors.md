@@ -16,5 +16,5 @@ const descriptors = Object.getOwnPropertyDescriptors(obj);
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.2/src/rules/no-object-getownpropertydescriptors.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.2/tests/src/rules/no-object-getownpropertydescriptors.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.3/src/rules/no-object-getownpropertydescriptors.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.3/tests/src/rules/no-object-getownpropertydescriptors.ts)
