@@ -96,6 +96,7 @@ import noNumberParsefloat from './rules/no-number-parsefloat';
 import noNumberParseint from './rules/no-number-parseint';
 import noNumericSeparators from './rules/no-numeric-separators';
 import noObjectAssign from './rules/no-object-assign';
+import noObjectCreate from './rules/no-object-create';
 import noObjectDefineproperties from './rules/no-object-defineproperties';
 import noObjectDefineproperty from './rules/no-object-defineproperty';
 import noObjectEntries from './rules/no-object-entries';
@@ -262,6 +263,7 @@ export default {
     'no-number-parseint': noNumberParseint,
     'no-numeric-separators': noNumericSeparators,
     'no-object-assign': noObjectAssign,
+    'no-object-create': noObjectCreate,
     'no-object-defineproperties': noObjectDefineproperties,
     'no-object-defineproperty': noObjectDefineproperty,
     'no-object-entries': noObjectEntries,

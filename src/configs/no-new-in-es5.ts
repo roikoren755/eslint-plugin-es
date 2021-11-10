@@ -19,6 +19,7 @@ export default {
     'es-roikoren/no-date-now': 'error',
     'es-roikoren/no-json': 'error',
     'es-roikoren/no-keyword-properties': 'error',
+    'es-roikoren/no-object-create': 'error',
     'es-roikoren/no-object-defineproperties': 'error',
     'es-roikoren/no-object-defineproperty': 'error',
     'es-roikoren/no-object-freeze': 'error',

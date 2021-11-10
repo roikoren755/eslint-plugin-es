@@ -191,6 +191,7 @@ There are multiple configs that enable all rules in this category: `plugin:es-ro
 | [es-roikoren/no-date-now](./no-date-now.md) | disallow the `Date.now` method. |  |
 | [es-roikoren/no-json](./no-json.md) | disallow the `JSON` class. |  |
 | [es-roikoren/no-keyword-properties](./no-keyword-properties.md) | disallow reserved words as property names. |  |
+| [es-roikoren/no-object-create](./no-object-create.md) | disallow the `Object.create` method |  |
 | [es-roikoren/no-object-defineproperties](./no-object-defineproperties.md) | disallow the `Object.defineProperties` method. |  |
 | [es-roikoren/no-object-defineproperty](./no-object-defineproperty.md) | disallow the `Object.defineProperty` method. |  |
 | [es-roikoren/no-object-freeze](./no-object-freeze.md) | disallow the `Object.freeze` method. |  |

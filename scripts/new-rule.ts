@@ -67,9 +67,10 @@ This rule reports ??? as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/${ruleId}: error */
+\`\`\`js
+/*eslint es-roikoren/${ruleId}: error */
 
-" />
+\`\`\`
 `,
   );
 
