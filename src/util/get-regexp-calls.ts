@@ -15,7 +15,11 @@ export function* getRegExpCalls(
   for (const { node } of tracker.iterateGlobalReferences({
     RegExp: { [ASTUtils.ReferenceTracker.CALL]: true, [ASTUtils.ReferenceTracker.CONSTRUCT]: true },
   })) {
-    const [patternNode, flagsNode] = (node as TSESTree.CallExpression).arguments;
+    if (!('arguments' in node)) {
+      continue;
+    }
+
+    const [patternNode, flagsNode] = node.arguments;
 
     yield {
       node,

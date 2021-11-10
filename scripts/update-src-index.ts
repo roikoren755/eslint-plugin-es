@@ -14,6 +14,10 @@ const run = async (): Promise<void> => {
     .map((f) => path.basename(f, '.ts'))
     .sort(collator.compare.bind(collator));
   const ruleIds = rules.map((r) => r.ruleId).sort(collator.compare.bind(collator));
+  const configImports = configIds.map((id) => `import ${camelcase(id)} from './configs/${id}';`).join('\n');
+  const ruleImports = ruleIds.map((id) => `import ${camelcase(id)} from './rules/${id}';`).join('\n');
+  const configs = configIds.map((id) => `'${id}': ${camelcase(id)}`).join(',');
+  const rulesField = ruleIds.map((id) => `'${id}': ${camelcase(id)}`).join(',');
 
   fs.writeFileSync(
     'src/index.ts',
@@ -21,15 +25,15 @@ const run = async (): Promise<void> => {
  * DON'T EDIT THIS FILE.
  * This file was generated automatically by 'scripts/update-src-index.ts'.
  */
-${configIds.map((id) => `import ${camelcase(id)} from './configs/${id}';`).join('\n')}
-${ruleIds.map((id) => `import ${camelcase(id)} from './rules/${id}';`).join('\n')}
+${configImports}
+${ruleImports}
 
 export default {
   configs: {
-    ${configIds.map((id) => `'${id}': ${camelcase(id)}`).join(',')},
+    ${configs},
   },
   rules: {
-    ${ruleIds.map((id) => `'${id}': ${camelcase(id)}`).join(',')}
+    ${rulesField}
   },
 };
 `,

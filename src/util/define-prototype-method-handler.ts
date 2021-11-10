@@ -1,6 +1,7 @@
 /* eslint-disable max-lines */
 import { ASTUtils } from '@typescript-eslint/experimental-utils';
 import type { JSONSchema, TSESLint, TSESTree } from '@typescript-eslint/experimental-utils';
+import type { ParserServices } from '@typescript-eslint/typescript-estree';
 import type * as TypeScript from 'typescript';
 
 import { optionalRequire } from './optional-require';
@@ -119,6 +120,170 @@ const isUnionOrIntersection = (type: TypeScript.Type): type is TypeScript.UnionO
  */
 const isUnknown = (type: TypeScript.Type): boolean => (type.flags & (ts as TS).TypeFlags.Unknown) !== 0; // eslint-disable-line no-bitwise
 
+interface IOptions {
+  aggressive: boolean;
+  checker?: TypeScript.TypeChecker | undefined;
+  hasFullType: boolean;
+  isTS: boolean;
+  tsNodeMap?: ParserServices['esTreeNodeToTSNodeMap'] | undefined;
+}
+
+/**
+ * Get the constraint type of a given type parameter type if exists.
+ *
+ * `type.getConstraint()` method doesn't return the constraint type of the
+ * type parameter for some reason. So this gets the constraint type via AST.
+ *
+ * @param {TypeScript.TypeParameter} type The type parameter type to get.
+ * @param {Pick<IOptions, 'checker'>} options The options containing the type checker to use.
+ * @returns {TypeScript.Type | undefined} The constraint type.
+ */
+const getConstraintType = (
+  type: TypeScript.TypeParameter,
+  { checker }: Pick<IOptions, 'checker'>,
+): TypeScript.Type | undefined => {
+  const { symbol } = type;
+  const declarations = symbol?.declarations;
+  const declaration = declarations?.[0];
+
+  if (declaration && ts?.isTypeParameterDeclaration(declaration) && declaration.constraint) {
+    return checker?.getTypeFromTypeNode(declaration.constraint);
+  }
+
+  // eslint-disable-next-line consistent-return
+  return undefined;
+};
+
+/**
+ * Check if the name of the given type is expected or not.
+ * @param {TypeScript.Type} type The type to check.
+ * @param {string} className The expected type name.
+ * @param {IOptions} options The options to use.
+ * @returns {boolean} `true` if should disallow it.
+ */
+const typeEquals = (type: TypeScript.Type, className: string, options: IOptions): boolean => {
+  if (isAny(type) || isUnknown(type)) {
+    return options.aggressive;
+  }
+
+  if (isAnonymousObject(type)) {
+    // In non full-type mode, array types (e.g. `any[]`) become anonymous object type.
+    return options.hasFullType ? false : options.aggressive;
+  }
+
+  if (isStringLike(type)) {
+    return className === 'String';
+  }
+
+  if (isArrayLikeObject(type)) {
+    return className === 'Array';
+  }
+
+  if (isReferenceObject(type) && type.target !== type) {
+    return typeEquals(type.target, className, options);
+  }
+
+  if (isTypeParameter(type)) {
+    const constraintType = getConstraintType(type, options);
+
+    if (constraintType) {
+      return typeEquals(constraintType, className, options);
+    }
+
+    return options.hasFullType ? false : options.aggressive;
+  }
+
+  if (isUnionOrIntersection(type)) {
+    return type.types.some((t) => typeEquals(t, className, options));
+  }
+
+  if (isClassOrInterface(type)) {
+    const name = type.symbol.escapedName;
+
+    return name === className || name === `Readonly${className}`;
+  }
+
+  return options.checker?.typeToString(type) === className;
+};
+
+/**
+ * Check if the type of the given node by the declaration of `node.property`.
+ * @param {MemberExpression} memberAccessNode The MemberExpression node.
+ * @param {string} className The class name to disallow.
+ * @param {IOptions} options The options to use.
+ * @returns {boolean} `true` if should disallow it.
+ */
+const checkByPropertyDeclaration = (
+  memberAccessNode: TSESTree.MemberExpression,
+  className: string,
+  options: IOptions,
+): boolean => {
+  const tsNode = options.tsNodeMap?.get(memberAccessNode.property);
+  const symbol = tsNode && options.checker?.getSymbolAtLocation(tsNode);
+  const declarations = symbol?.declarations;
+
+  if (declarations) {
+    for (const declaration of declarations) {
+      const type = options.checker?.getTypeAtLocation(declaration.parent);
+
+      if (type && typeEquals(type, className, options)) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+};
+
+/**
+ * Check if the type of the given node by the type of `node.object`.
+ * @param {MemberExpression} memberAccessNode The MemberExpression node.
+ * @param {string} className The class name to disallow.
+ * @param {IOptions} options The options to use.
+ * @returns {boolean} `true` if should disallow it.
+ */
+const checkByObjectExpressionType = (
+  memberAccessNode: TSESTree.MemberExpression,
+  className: string,
+  options: IOptions,
+): boolean => {
+  const tsNode = options.tsNodeMap?.get(memberAccessNode.object);
+  const type = options.checker?.getTypeAtLocation(tsNode as TypeScript.Node);
+
+  return typeEquals(type as TypeScript.Type, className, options);
+};
+
+/**
+ * Check if the type of the given node is one of given class or not.
+ * @param {MemberExpression} memberAccessNode The MemberExpression node.
+ * @param {string} className The class name to disallow.
+ * @param {IOptions} options The options to use.
+ * @returns {boolean} `true` if should disallow it.
+ */
+const checkObjectType = (memberAccessNode: TSESTree.MemberExpression, className: string, options: IOptions): boolean => {
+  // If it's obvious, shortcut.
+  if (memberAccessNode.object.type === 'ArrayExpression') {
+    return className === 'Array';
+  }
+
+  if (memberAccessNode.object.type === 'Literal' && 'regex' in memberAccessNode.object) {
+    return className === 'RegExp';
+  }
+
+  if (
+    (memberAccessNode.object.type === 'Literal' && typeof memberAccessNode.object.value === 'string') ||
+    memberAccessNode.object.type === 'TemplateLiteral'
+  ) {
+    return className === 'String';
+  }
+
+  // Test object type.
+  return options.isTS
+    ? checkByPropertyDeclaration(memberAccessNode, className, options) ||
+        checkByObjectExpressionType(memberAccessNode, className, options)
+    : options.aggressive;
+};
+
 /**
  * Define handlers to disallow prototype methods.
  * @param {TSESLint.RuleContext<'forbidden', readonly []>} context The rule context.
@@ -136,151 +301,7 @@ export const definePrototypeMethodHandler = (
 
   const isTS = Boolean(ts && tsNodeMap && checker);
   const hasFullType = isTS && context.parserServices?.hasFullTypeInformation !== false;
-
-  /**
-   * Get the constraint type of a given type parameter type if exists.
-   *
-   * `type.getConstraint()` method doesn't return the constraint type of the
-   * type parameter for some reason. So this gets the constraint type via AST.
-   *
-   * @param {TypeScript.TypeParameter} type The type parameter type to get.
-   * @returns {TypeScript.Type | undefined} The constraint type.
-   */
-  const getConstraintType = (type: TypeScript.TypeParameter): TypeScript.Type | undefined => {
-    const { symbol } = type;
-    const declarations = symbol?.declarations;
-    const declaration = declarations?.[0];
-
-    if (
-      ts?.isTypeParameterDeclaration(declaration as TypeScript.Declaration) &&
-      (declaration as TypeScript.TypeParameterDeclaration).constraint
-    ) {
-      return checker?.getTypeFromTypeNode(
-        (declaration as TypeScript.TypeParameterDeclaration).constraint as TypeScript.TypeNode,
-      );
-    }
-
-    // eslint-disable-next-line consistent-return
-    return undefined;
-  };
-
-  /**
-   * Check if the name of the given type is expected or not.
-   * @param {TypeScript.Type} type The type to check.
-   * @param {string} className The expected type name.
-   * @returns {boolean} `true` if should disallow it.
-   */
-  const typeEquals = (type: TypeScript.Type, className: string): boolean => {
-    if (isAny(type) || isUnknown(type)) {
-      return aggressive;
-    }
-
-    if (isAnonymousObject(type)) {
-      // In non full-type mode, array types (e.g. `any[]`) become anonymous object type.
-      return hasFullType ? false : aggressive;
-    }
-
-    if (isStringLike(type)) {
-      return className === 'String';
-    }
-
-    if (isArrayLikeObject(type)) {
-      return className === 'Array';
-    }
-
-    if (isReferenceObject(type) && type.target !== type) {
-      return typeEquals(type.target, className);
-    }
-
-    if (isTypeParameter(type)) {
-      const constraintType = getConstraintType(type);
-
-      if (constraintType) {
-        return typeEquals(constraintType, className);
-      }
-
-      return hasFullType ? false : aggressive;
-    }
-
-    if (isUnionOrIntersection(type)) {
-      return type.types.some((t) => typeEquals(t, className));
-    }
-
-    if (isClassOrInterface(type)) {
-      const name = type.symbol.escapedName;
-
-      return name === className || name === `Readonly${className}`;
-    }
-
-    return checker?.typeToString(type) === className;
-  };
-
-  /**
-   * Check if the type of the given node by the declaration of `node.property`.
-   * @param {MemberExpression} memberAccessNode The MemberExpression node.
-   * @param {string} className The class name to disallow.
-   * @returns {boolean} `true` if should disallow it.
-   */
-  const checkByPropertyDeclaration = (memberAccessNode: TSESTree.MemberExpression, className: string): boolean => {
-    const tsNode = tsNodeMap?.get(memberAccessNode.property);
-    const symbol = tsNode && checker?.getSymbolAtLocation(tsNode);
-    const declarations = symbol?.declarations;
-
-    if (declarations) {
-      for (const declaration of declarations) {
-        const type = checker?.getTypeAtLocation(declaration.parent);
-
-        if (type && typeEquals(type, className)) {
-          return true;
-        }
-      }
-    }
-
-    return false;
-  };
-
-  /**
-   * Check if the type of the given node by the type of `node.object`.
-   * @param {MemberExpression} memberAccessNode The MemberExpression node.
-   * @param {string} className The class name to disallow.
-   * @returns {boolean} `true` if should disallow it.
-   */
-  const checkByObjectExpressionType = (memberAccessNode: TSESTree.MemberExpression, className: string): boolean => {
-    const tsNode = tsNodeMap?.get(memberAccessNode.object);
-    const type = checker?.getTypeAtLocation(tsNode as TypeScript.Node);
-
-    return typeEquals(type as TypeScript.Type, className);
-  };
-
-  /**
-   * Check if the type of the given node is one of given class or not.
-   * @param {MemberExpression} memberAccessNode The MemberExpression node.
-   * @param {string} className The class name to disallow.
-   * @returns {boolean} `true` if should disallow it.
-   */
-  const checkObjectType = (memberAccessNode: TSESTree.MemberExpression, className: string): boolean => {
-    // If it's obvious, shortcut.
-    if (memberAccessNode.object.type === 'ArrayExpression') {
-      return className === 'Array';
-    }
-
-    if (memberAccessNode.object.type === 'Literal' && (memberAccessNode.object as TSESTree.RegExpLiteral).regex) {
-      return className === 'RegExp';
-    }
-
-    if (
-      (memberAccessNode.object.type === 'Literal' && typeof memberAccessNode.object.value === 'string') ||
-      memberAccessNode.object.type === 'TemplateLiteral'
-    ) {
-      return className === 'String';
-    }
-
-    // Test object type.
-    return isTS
-      ? checkByPropertyDeclaration(memberAccessNode, className) ||
-          checkByObjectExpressionType(memberAccessNode, className)
-      : aggressive;
-  };
+  const options: IOptions = { aggressive, checker, hasFullType, isTS, tsNodeMap };
 
   // For performance
   const nameMapEntries = Object.entries(nameMap);
@@ -292,7 +313,7 @@ export const definePrototypeMethodHandler = (
       MemberExpression(node) {
         const propertyName = ASTUtils.getPropertyName(node, context.getScope());
 
-        if (methodNames.includes(propertyName as string) && checkObjectType(node, className)) {
+        if (methodNames.includes(propertyName as string) && checkObjectType(node, className, options)) {
           context.report({
             node,
             messageId: 'forbidden',
@@ -308,7 +329,7 @@ export const definePrototypeMethodHandler = (
       const propertyName = ASTUtils.getPropertyName(node, context.getScope());
 
       for (const [className, methodNames] of nameMapEntries) {
-        if (methodNames.includes(propertyName as string) && checkObjectType(node, className)) {
+        if (methodNames.includes(propertyName as string) && checkObjectType(node, className, options)) {
           context.report({
             node,
             messageId: 'forbidden',

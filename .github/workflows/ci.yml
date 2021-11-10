@@ -1,0 +1,66 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: 0 0 * * 0
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: Install Packages
+        run: yarn install --frozen-lockfile
+      - name: Deduplicate yarn.lock
+        run: yarn deduplicate --list --fail
+      - name: Lint
+        run: yarn lint
+      - name: Type
+        run: yarn type
+
+  test:
+    name: Test
+
+    strategy:
+      matrix:
+        eslint: [5, 6, 7, 8]
+        node: [12, 14, 16]
+        os: [ubuntu-latest]
+        include:
+          # On other platforms
+          - eslint: 8
+            node: 16
+            os: windows-latest
+          - eslint: 8
+            node: 16
+            os: macos-latest
+
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Install Packages
+        run: yarn install --frozen-lockfile
+      - name: Install ESLint ${{ matrix.eslint }}
+        run: yarn add eslint@${{ matrix.eslint }} -D
+      - name: Test
+        run: yarn test
+      - name: Coverage
+        run: yarn coverage
+      - name: Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}

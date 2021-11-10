@@ -1,8 +1,8 @@
-import { execSync } from 'child_process';
 import { writeFileSync } from 'fs';
 import path from 'path';
+import { TSESLint } from '@typescript-eslint/experimental-utils';
 
-((ruleId: string): void => {
+const run = async (ruleId: string): Promise<void> => {
   if (!ruleId) {
     console.error('Usage: npm run new <RuleID>');
     process.exitCode = 1;
@@ -23,7 +23,7 @@ import path from 'path';
 
   writeFileSync(
     ruleFile,
-    `import { createRule } from '../utils/create-rule';
+    `import { createRule } from '../util/create-rule';
 
 export const category = 'ES2021';
 export default createRule<[], 'forbidden'>({
@@ -43,7 +43,7 @@ export default createRule<[], 'forbidden'>({
   );
   writeFileSync(
     testFile,
-    `import { RuleTester } = from '../../tester';
+    `import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/${ruleId}';
 
 if (!RuleTester.isSupported(2021)) {
@@ -73,7 +73,7 @@ This rule reports ??? as errors.
 `,
   );
 
-  execSync(`code "${ruleFile}"`);
-  execSync(`code "${testFile}"`);
-  execSync(`code "${docFile}"`);
-})(process.argv[2]);
+  await TSESLint.ESLint.outputFixes((await new TSESLint.ESLint({ fix: true }).lintFiles([ruleFile, testFile])) as never);
+};
+
+run(process.argv[2]).catch(console.error);

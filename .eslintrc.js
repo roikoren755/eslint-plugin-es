@@ -39,7 +39,6 @@ module.exports = {
     'no-case-declarations': OFF,
     'no-console': WARN,
     'no-constructor-return': ERROR,
-    'no-continue': WARN,
     'no-else-return': ERROR,
     'no-eval': ERROR,
     'no-extend-native': ERROR,

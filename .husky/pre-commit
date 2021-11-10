@@ -3,3 +3,6 @@
 
 yarn lint-staged
 yarn deduplicate --list --fail
+
+yarn update
+git add docs/ src/configs/ src/index.ts
