@@ -58,7 +58,9 @@ jobs:
         run: yarn add eslint@${{ matrix.eslint }}
       - name: Test
         run: yarn test
+      - name: Coverage
+        run: yarn coverage
       - name: Codecov
         uses: codecov/codecov-action@v2
         with:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          token: ${{ secrets.CODECOV_TOKEN }}
