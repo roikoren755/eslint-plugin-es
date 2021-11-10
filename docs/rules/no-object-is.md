@@ -9,9 +9,10 @@ This rule reports ES2015 `Object.is` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-object-is: error */
-const negZero = Object.is(value, -0)
-" />
+```js
+/*eslint es-roikoren/no-object-is: error */
+const negZero = Object.is(value, -0);
+```
 
 ## 📚 References
 

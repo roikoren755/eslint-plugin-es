@@ -9,9 +9,10 @@ This rule reports ES2015 `Math.clz32` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-math-clz32: error */
-const n = Math.clz32(value)
-" />
+```js
+/*eslint es-roikoren/no-math-clz32: error */
+const n = Math.clz32(value);
+```
 
 ## 📚 References
 

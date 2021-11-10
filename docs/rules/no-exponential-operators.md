@@ -9,10 +9,11 @@ This rule reports ES2016 [exponential operators](https://github.com/rwaldron/exp
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-exponential-operators: error */
-let a = b ** 2
-a **= b
-" />
+```js
+/*eslint es-roikoren/no-exponential-operators: error */
+let a = b ** 2;
+a **= b;
+```
 
 ## 📚 References
 

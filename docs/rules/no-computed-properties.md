@@ -9,17 +9,18 @@ This rule reports ES2015 computed properties as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-computed-properties: error */
+```js
+/*eslint es-roikoren/no-computed-properties: error */
 const obj = {
-    [a]: 1,
-    [b]() {},
-    get [c]() {},
-    set [c](value) {},
-}
+  [a]: 1,
+  [b]() {},
+  get [c]() {},
+  set [c](value) {},
+};
 class A {
-    [a]() {}
+  [a]() {}
 }
-" />
+```
 
 ## 📚 References
 

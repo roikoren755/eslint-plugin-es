@@ -13,10 +13,11 @@ This proposal includes the following two:
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-weakrefs: error */
-let ref = new WeakRef()
-let finalizationGroup = new FinalizationRegistry(() =&gt; {})
-" />
+```js
+/*eslint es-roikoren/no-weakrefs: error */
+let ref = new WeakRef();
+let finalizationGroup = new FinalizationRegistry(() => {});
+```
 
 ## 📚 References
 

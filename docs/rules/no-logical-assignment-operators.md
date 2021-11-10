@@ -10,11 +10,12 @@ This rule reports ES2021 [logical assignment operators](https://github.com/tc39/
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-logical-assignment-operators: error */
-x ||= y
-x &&= y
-x ??= y
-" />
+```js
+/*eslint es-roikoren/no-logical-assignment-operators: error */
+x ||= y;
+x &&= y;
+x ??= y;
+```
 
 ## 📚 References
 

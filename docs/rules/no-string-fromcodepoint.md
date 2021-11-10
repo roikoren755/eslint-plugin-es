@@ -9,9 +9,10 @@ This rule reports ES2015 `String.fromCodePoint` as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-string-fromcodepoint: error */
-const thumbUp = String.fromCodePoint(0x1F44D)
-" />
+```js
+/*eslint es-roikoren/no-string-fromcodepoint: error */
+const thumbUp = String.fromCodePoint(0x1F44D);
+```
 
 ## 📚 References
 

@@ -9,11 +9,12 @@ This rule reports ES2020 [`import()` syntax](https://github.com/tc39/proposal-dy
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-dynamic-import: error */
+```js
+/*eslint es-roikoren/no-dynamic-import: error */
 async function f() {
-    const a = await import(&quot;source&quot;)
+  const a = await import('source');
 }
-" />
+```
 
 ## 📚 References
 

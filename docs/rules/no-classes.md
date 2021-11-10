@@ -9,10 +9,11 @@ This rule reports ES2015 class declarations as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-classes: error */
+```js
+/*eslint es-roikoren/no-classes: error */
 class A {}
-const B = class {}
-" />
+const B = class {};
+```
 
 ## 📚 References
 

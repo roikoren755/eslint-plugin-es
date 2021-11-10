@@ -9,9 +9,10 @@ This rule reports ES2015 `Math.cbrt` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-math-cbrt: error */
-const n = Math.cbrt(value)
-" />
+```js
+/*eslint es-roikoren/no-math-cbrt: error */
+const n = Math.cbrt(value);
+```
 
 ## 📚 References
 

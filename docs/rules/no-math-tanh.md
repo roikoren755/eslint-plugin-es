@@ -9,9 +9,10 @@ This rule reports ES2015 `Math.tanh` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-math-tanh: error */
-const n = Math.tanh(value)
-" />
+```js
+/*eslint es-roikoren/no-math-tanh: error */
+const n = Math.tanh(value);
+```
 
 ## 📚 References
 

@@ -9,9 +9,10 @@ This rule reports ES5 `Object.seal` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-object-seal: error */
-Object.seal(obj)
-" />
+```js
+/*eslint es-roikoren/no-object-seal: error */
+Object.seal(obj);
+```
 
 ## 📚 References
 

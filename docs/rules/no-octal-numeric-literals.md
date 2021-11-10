@@ -9,9 +9,10 @@ This rule reports ES2015 octal numeric literals as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-octal-numeric-literals: error */
-let a = 0o123
-" />
+```js
+/*eslint es-roikoren/no-octal-numeric-literals: error */
+let a = 0o123;
+```
 
 ## 📚 References
 

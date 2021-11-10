@@ -9,11 +9,12 @@ This rule reports ES2020 [Optional Chaining](https://github.com/tc39/proposal-op
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-optional-chaining: error */
-var x = a?.b
-var x = a?.[b]
-foo?.()
-" />
+```js
+/*eslint es-roikoren/no-optional-chaining: error */
+var x = a?.b;
+var x = a?.[b];
+foo?.();
+```
 
 👌 Examples of **correct** code for this rule:
 

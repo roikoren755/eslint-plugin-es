@@ -9,16 +9,17 @@ This rule reports ES2015 generator function declarations as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-generators: error */
+```js
+/*eslint es-roikoren/no-generators: error */
 function* f1() {}
-const f2 = function*() {}
+const f2 = function*() {};
 const obj = {
-    *f3() {}
-}
+  *f3() {}
+};
 class A {
-    *f4() {}
+  *f4() {}
 }
-" />
+```
 
 ## 📚 References
 

@@ -9,9 +9,10 @@ This rule reports ES2015 RegExp `u` flag as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-regexp-u-flag: error */
-const r1 = /[☀️☔]/u
-" />
+```js
+/*eslint es-roikoren/no-regexp-u-flag: error */
+const r1 = /[☀️☔]/u;
+```
 
 ## 📚 References
 

@@ -9,9 +9,10 @@ This rule reports ES2015 `Promise` class as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-promise: error */
-let p = new Promise()
-" />
+```js
+/*eslint es-roikoren/no-promise: error */
+let p = new Promise();
+```
 
 ## 📚 References
 

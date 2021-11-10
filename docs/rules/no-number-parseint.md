@@ -9,9 +9,10 @@ This rule reports ES2015 `Number.parseInt` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-number-parseint: error */
-const b = Number.parseInt(value)
-" />
+```js
+/*eslint es-roikoren/no-number-parseint: error */
+const b = Number.parseInt(value);
+```
 
 ## 📚 References
 

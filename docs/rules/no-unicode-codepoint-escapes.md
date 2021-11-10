@@ -10,16 +10,17 @@ This rule reports ES2015 Unicode code point escape sequences as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-unicode-codepoint-escapes: error */
-const a\u{31} = `foo`
-const a2 = &quot;a\u{62}b&quot;
-" />
+```js
+/*eslint es-roikoren/no-unicode-codepoint-escapes: error */
+const a\u{31} = `foo`;
+const a2 = 'a\u{62}b';
+```
 
 👌 Examples of **correct** code for this rule:
 
 <eslint-playground type="good" code="/*eslint es-roikoren/no-unicode-codepoint-escapes: error */
 const a\u0031 = `foo`
-const a2 = &quot;a\u0062b&quot;
+const a2 = 'a\u0062b'
 " />
 
 ## 📚 References

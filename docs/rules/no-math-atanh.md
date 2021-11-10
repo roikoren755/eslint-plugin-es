@@ -9,9 +9,10 @@ This rule reports ES2015 `Math.atanh` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-math-atanh: error */
-const n = Math.atanh(value)
-" />
+```js
+/*eslint es-roikoren/no-math-atanh: error */
+const n = Math.atanh(value);
+```
 
 ## 📚 References
 

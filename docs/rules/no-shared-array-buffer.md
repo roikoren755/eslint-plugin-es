@@ -9,9 +9,10 @@ This rule reports ES2017 `SharedArrayBuffer` class as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-shared-array-buffer: error */
-let buffer = new SharedArrayBuffer(10)
-" />
+```js
+/*eslint es-roikoren/no-shared-array-buffer: error */
+let buffer = new SharedArrayBuffer(10);
+```
 
 ## 📚 References
 

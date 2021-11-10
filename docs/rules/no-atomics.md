@@ -9,9 +9,10 @@ This rule reports ES2017 `Atomics` class as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-atomics: error */
-Atomics.add(buffer, 0, 2)
-" />
+```js
+/*eslint es-roikoren/no-atomics: error */
+Atomics.add(buffer, 0, 2);
+```
 
 ## 📚 References
 

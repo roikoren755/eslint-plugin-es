@@ -9,9 +9,10 @@ This rule reports ES2020 `globalThis` variable as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-global-this: error */
-console.log(globalThis === window)
-" />
+```js
+/*eslint es-roikoren/no-global-this: error */
+console.log(globalThis === window);
+```
 
 ## 📚 References
 

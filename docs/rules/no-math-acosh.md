@@ -9,9 +9,10 @@ This rule reports ES2015 `Math.acosh` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-math-acosh: error */
-const n = Math.acosh(value)
-" />
+```js
+/*eslint es-roikoren/no-math-acosh: error */
+const n = Math.acosh(value);
+```
 
 ## 📚 References
 

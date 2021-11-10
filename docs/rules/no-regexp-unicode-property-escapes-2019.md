@@ -27,10 +27,11 @@ For example, the following patterns are valid in ES2019, but syntax error in ES2
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-regexp-unicode-property-escapes-2019: error */
-const r1 = /\p{Extended_Pictographic}/u
-const r2 = /\p{Script=Dogr}/u
-" />
+```js
+/*eslint es-roikoren/no-regexp-unicode-property-escapes-2019: error */
+const r1 = /\p{Extended_Pictographic}/u;
+const r2 = /\p{Script=Dogr}/u;
+```
 
 ## 📚 References
 

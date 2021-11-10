@@ -9,9 +9,10 @@ This rule reports ES2015 `Math.cosh` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-math-cosh: error */
-const n = Math.cosh(value)
-" />
+```js
+/*eslint es-roikoren/no-math-cosh: error */
+const n = Math.cosh(value);
+```
 
 ## 📚 References
 

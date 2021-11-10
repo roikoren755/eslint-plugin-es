@@ -9,10 +9,11 @@ This rule reports ES2018 [RegExp lookbehind assertions](https://github.com/tc39/
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-regexp-lookbehind-assertions: error */
-const r1 = /(?<=a)b/
-const r2 = /(?<!a)b/
-" />
+```js
+/*eslint es-roikoren/no-regexp-lookbehind-assertions: error */
+const r1 = /(?<=a)b/;
+const r2 = /(?<!a)b/;
+```
 
 ## 📚 References
 

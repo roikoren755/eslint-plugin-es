@@ -9,9 +9,10 @@ This rule reports ES5 `Object.getOwnPropertyNames` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-object-getownpropertynames: error */
-Object.getOwnPropertyNames(obj, &quot;prop&quot;, {})
-" />
+```js
+/*eslint es-roikoren/no-object-getownpropertynames: error */
+Object.getOwnPropertyNames(obj, 'prop', {});
+```
 
 ## 📚 References
 

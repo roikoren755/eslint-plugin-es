@@ -9,9 +9,10 @@ This rule reports ES2020 [`Promise.allSettled` function](https://github.com/tc39
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-promise-all-settled: error */
-const p = Promise.allSettled(promises)
-" />
+```js
+/*eslint es-roikoren/no-promise-all-settled: error */
+const p = Promise.allSettled(promises);
+```
 
 ## 📚 References
 

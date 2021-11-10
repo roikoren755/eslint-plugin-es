@@ -9,9 +9,10 @@ This rule reports ES2015 `Object.setPrototypeOf` as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-object-setprototypeof: error */
-Object.setPrototypeOf(obj, proto)
-" />
+```js
+/*eslint es-roikoren/no-object-setprototypeof: error */
+Object.setPrototypeOf(obj, proto);
+```
 
 ## 📚 References
 

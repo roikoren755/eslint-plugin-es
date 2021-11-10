@@ -9,9 +9,10 @@ This rule reports ES5 `Array.isArray` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-array-isarray: error */
-var array = Array.isArray(obj)
-" />
+```js
+/*eslint es-roikoren/no-array-isarray: error */
+var array = Array.isArray(obj);
+```
 
 ## 📚 References
 

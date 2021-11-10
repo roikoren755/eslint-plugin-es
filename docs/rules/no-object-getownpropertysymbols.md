@@ -9,9 +9,10 @@ This rule reports ES2015 `Object.getOwnPropertySymbols` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-object-getownpropertysymbols: error */
-const symbols = Object.getOwnPropertySymbols(obj)
-" />
+```js
+/*eslint es-roikoren/no-object-getownpropertysymbols: error */
+const symbols = Object.getOwnPropertySymbols(obj);
+```
 
 ## 📚 References
 

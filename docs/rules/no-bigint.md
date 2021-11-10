@@ -9,12 +9,13 @@ This rule reports ES2020 [BigInt](https://github.com/tc39/proposal-bigint) as er
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-bigint: error */
-let a = 100n
-let b = BigInt(100)
-let c = new BigInt64Array(10)
-let d = new BigUint64Array(10)
-" />
+```js
+/*eslint es-roikoren/no-bigint: error */
+let a = 100n;
+let b = BigInt(100);
+let c = new BigInt64Array(10);
+let d = new BigUint64Array(10);
+```
 
 ## 📚 References
 

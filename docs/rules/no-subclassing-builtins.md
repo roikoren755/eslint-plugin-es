@@ -22,11 +22,12 @@ The built-in classes include the following classes (constructors):
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-subclassing-builtins: error */
+```js
+/*eslint es-roikoren/no-subclassing-builtins: error */
 class MyArray extends Array {
-    // ...
+  // ...
 }
-" />
+```
 
 ## 📚 References
 

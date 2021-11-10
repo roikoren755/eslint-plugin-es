@@ -10,17 +10,18 @@ This rule reports ES2015 template literals as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-template-literals: error */
-const a1 = `foo`
-const a2 = `foo${bar}baz`
-const a3 = tag`foo`
-" />
+```js
+/*eslint es-roikoren/no-template-literals: error */
+const a1 = `foo`;
+const a2 = `foo${bar}baz`;
+const a3 = tag`foo`;
+```
 
 👌 Examples of **correct** code for this rule:
 
 <eslint-playground type="good" code="/*eslint es-roikoren/no-template-literals: error */
-const a1 = &quot;foo&quot;
-const a2 = &quot;foo&quot;+bar+&quot;baz&quot;
+const a1 = 'foo'
+const a2 = 'foo'+bar+'baz'
 " />
 
 ## 📚 References

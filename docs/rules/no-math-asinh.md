@@ -9,9 +9,10 @@ This rule reports ES2015 `Math.asinh` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-math-asinh: error */
-const n = Math.asinh(value)
-" />
+```js
+/*eslint es-roikoren/no-math-asinh: error */
+const n = Math.asinh(value);
+```
 
 ## 📚 References
 

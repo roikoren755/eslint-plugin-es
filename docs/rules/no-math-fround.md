@@ -9,9 +9,10 @@ This rule reports ES2015 `Math.fround` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-math-fround: error */
-const n = Math.fround(value)
-" />
+```js
+/*eslint es-roikoren/no-math-fround: error */
+const n = Math.fround(value);
+```
 
 ## 📚 References
 

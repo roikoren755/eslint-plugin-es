@@ -9,9 +9,10 @@ This rule reports ES2020 [Nullish Coalescing operators](https://github.com/tc39/
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-nullish-coalescing-operators: error */
-var x = a ?? b
-" />
+```js
+/*eslint es-roikoren/no-nullish-coalescing-operators: error */
+var x = a ?? b;
+```
 
 👌 Examples of **correct** code for this rule:
 

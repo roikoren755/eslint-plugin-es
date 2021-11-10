@@ -9,9 +9,10 @@ This rule reports ES5 `Object.isFrozen` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-object-isfrozen: error */
-var frozen = Object.isFrozen(obj)
-" />
+```js
+/*eslint es-roikoren/no-object-isfrozen: error */
+var frozen = Object.isFrozen(obj);
+```
 
 ## 📚 References
 

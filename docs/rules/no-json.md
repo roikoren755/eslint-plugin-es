@@ -9,10 +9,11 @@ This rule reports ES5 `JSON` class as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-json: error */
-var obj = JSON.parse(text)
-var str = JSON.stringify(data)
-" />
+```js
+/*eslint es-roikoren/no-json: error */
+var obj = JSON.parse(text);
+var str = JSON.stringify(data);
+```
 
 ## 📚 References
 

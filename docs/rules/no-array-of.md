@@ -9,9 +9,10 @@ This rule reports ES2015 `Array.of` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-array-of: error */
-const array = Array.of(1, 2, 3)
-" />
+```js
+/*eslint es-roikoren/no-array-of: error */
+const array = Array.of(1, 2, 3);
+```
 
 ## 📚 References
 

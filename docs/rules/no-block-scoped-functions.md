@@ -9,13 +9,14 @@ This rule reports ES2015 block-scoped function declarations as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-block-scoped-functions: error */
+```js
+/*eslint es-roikoren/no-block-scoped-functions: error */
 if (a) {
-    function f() {}
+  function f() {}
 } else {
-    function g() {}
+  function g() {}
 }
-" />
+```
 
 ## 📚 References
 

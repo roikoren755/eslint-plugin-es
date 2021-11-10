@@ -9,9 +9,10 @@ This rule reports ES2015 `Math.log10` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-math-log10: error */
-const n = Math.log10(value)
-" />
+```js
+/*eslint es-roikoren/no-math-log10: error */
+const n = Math.log10(value);
+```
 
 ## 📚 References
 

@@ -9,9 +9,10 @@ This rule reports ES5 `Date.now` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-date-now: error */
-var now = Date.now()
-" />
+```js
+/*eslint es-roikoren/no-date-now: error */
+var now = Date.now();
+```
 
 ## 📚 References
 

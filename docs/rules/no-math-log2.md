@@ -9,9 +9,10 @@ This rule reports ES2015 `Math.log2` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-math-log2: error */
-const n = Math.log2(value)
-" />
+```js
+/*eslint es-roikoren/no-math-log2: error */
+const n = Math.log2(value);
+```
 
 ## 📚 References
 

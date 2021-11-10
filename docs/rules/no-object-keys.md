@@ -9,9 +9,10 @@ This rule reports ES5 `Object.keys` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-object-keys: error */
-const keys = Object.keys(obj)
-" />
+```js
+/*eslint es-roikoren/no-object-keys: error */
+const keys = Object.keys(obj);
+```
 
 ## 📚 References
 

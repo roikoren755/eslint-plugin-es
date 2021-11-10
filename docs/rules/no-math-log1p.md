@@ -9,9 +9,10 @@ This rule reports ES2015 `Math.log1p` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-math-log1p: error */
-const n = Math.log1p(value)
-" />
+```js
+/*eslint es-roikoren/no-math-log1p: error */
+const n = Math.log1p(value);
+```
 
 ## 📚 References
 

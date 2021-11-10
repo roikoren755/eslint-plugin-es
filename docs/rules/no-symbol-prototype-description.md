@@ -11,9 +11,10 @@ This rule is silent by default because it's hard to know types. You need to conf
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-symbol-prototype-description: [error, { aggressive: true }] */
-Symbol(&quot;foo&quot;).description
-" />
+```js
+/*eslint es-roikoren/no-symbol-prototype-description: [error, { aggressive: true }] */
+Symbol('foo').description;
+```
 
 ## 🔧 Options
 

@@ -9,9 +9,10 @@ This rule reports ES2015 `Object.assign` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-object-assign: error */
-const obj = Object.assign({}, x, y)
-" />
+```js
+/*eslint es-roikoren/no-object-assign: error */
+const obj = Object.assign({}, x, y);
+```
 
 ## 📚 References
 

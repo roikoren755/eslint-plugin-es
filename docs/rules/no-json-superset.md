@@ -10,10 +10,11 @@ This rule reports ES2019 `\u2028` and `\u2029` in string literals as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-json-superset: error */
-const u2028 = &quot;&#x2028;&quot; // a \u2028 is in this string
-const u2029 = &quot;&#x2029;&quot; // a \u2029 is in this string
-" />
+```js
+/*eslint es-roikoren/no-json-superset: error */
+const u2028 = '&#x2028;'; // a \u2028 is in this string
+const u2029 = '&#x2029;'; // a \u2029 is in this string
+```
 
 ## 📚 References
 

@@ -9,9 +9,10 @@ This rule reports ES2015 default parameters as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-default-parameters: error */
+```js
+/*eslint es-roikoren/no-default-parameters: error */
 function f(a = 1) {}
-" />
+```
 
 ## 📚 References
 

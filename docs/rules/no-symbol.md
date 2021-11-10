@@ -9,9 +9,10 @@ This rule reports ES2015 `Symbol` class as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-symbol: error */
-let s = Symbol(&quot;s&quot;)
-" />
+```js
+/*eslint es-roikoren/no-symbol: error */
+let s = Symbol('s');
+```
 
 ## 📚 References
 

@@ -9,9 +9,10 @@ This rule reports ES2015 `WeakMap` class as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-weak-map: error */
-let map = new WeakMap()
-" />
+```js
+/*eslint es-roikoren/no-weak-map: error */
+let map = new WeakMap();
+```
 
 ## 📚 References
 

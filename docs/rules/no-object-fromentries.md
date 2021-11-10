@@ -9,9 +9,10 @@ This rule reports ES2019 `Object.fromEntries` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-object-fromentries: error */
-const obj = Object.fromEntries(map)
-" />
+```js
+/*eslint es-roikoren/no-object-fromentries: error */
+const obj = Object.fromEntries(map);
+```
 
 ## 📚 References
 

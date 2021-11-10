@@ -9,16 +9,17 @@ This rule reports ES5 accessor properties as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-accessor-properties: error */
+```js
+/*eslint es-roikoren/no-accessor-properties: error */
 var a = {
-    get a() {},
-    set a(value) {}
-}
+  get a() {},
+  set a(value) {},
+};
 class A {
-    get a() {}
-    set a(value) {}
+  get a() {}
+  set a(value) {}
 }
-" />
+```
 
 ## 📚 References
 

@@ -9,9 +9,10 @@ This rule reports ES2015 `Number.isFinite` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-number-isfinite: error */
-const b = Number.isFinite(value)
-" />
+```js
+/*eslint es-roikoren/no-number-isfinite: error */
+const b = Number.isFinite(value);
+```
 
 ## 📚 References
 

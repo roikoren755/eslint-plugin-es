@@ -9,9 +9,10 @@ This rule reports ES2015 `String.raw` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-string-raw: error */
-const pattern = String.raw`[\w_$]+`
-" />
+```js
+/*eslint es-roikoren/no-string-raw: error */
+const pattern = String.raw`[\w_$]+`;
+```
 
 ## 📚 References
 

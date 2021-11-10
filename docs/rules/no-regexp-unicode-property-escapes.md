@@ -9,9 +9,10 @@ This rule reports ES2018 [RegExp Unicode property escape sequences](https://gith
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-regexp-unicode-property-escapes: error */
-const r1 = /\p{Script=Hiragana}+/u
-" />
+```js
+/*eslint es-roikoren/no-regexp-unicode-property-escapes: error */
+const r1 = /\p{Script=Hiragana}+/u;
+```
 
 ## 📚 References
 

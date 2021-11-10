@@ -9,9 +9,10 @@ This rule reports ES2015 `Number.isNaN` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-number-isnan: error */
-const b = Number.isNaN(value)
-" />
+```js
+/*eslint es-roikoren/no-number-isnan: error */
+const b = Number.isNaN(value);
+```
 
 ## 📚 References
 

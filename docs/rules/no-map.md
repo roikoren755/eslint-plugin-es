@@ -9,9 +9,10 @@ This rule reports ES2015 `Map` class as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-map: error */
-let map = new Map()
-" />
+```js
+/*eslint es-roikoren/no-map: error */
+let map = new Map();
+```
 
 ## 📚 References
 

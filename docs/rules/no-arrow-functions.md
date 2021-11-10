@@ -10,10 +10,13 @@ This rule reports ES2015 arrow functions as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-arrow-functions: error */
-let a = () =&gt; 100
-let b = () =&gt; { doSomething() }
-" />
+```js
+/*eslint es-roikoren/no-arrow-functions: error */
+let a = () => 100;
+let b = () => { 
+  doSomething();
+};
+```
 
 👌 Examples of **correct** code for this rule:
 

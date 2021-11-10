@@ -9,9 +9,10 @@ This rule reports ES2015 `Math.trunc` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-math-trunc: error */
-const n = Math.trunc(value)
-" />
+```js
+/*eslint es-roikoren/no-math-trunc: error */
+const n = Math.trunc(value);
+```
 
 ## 📚 References
 

@@ -9,9 +9,10 @@ This rule reports ES5 `Object.isExtensible` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-object-isextensible: error */
-var extensible = Object.isExtensible(obj)
-" />
+```js
+/*eslint es-roikoren/no-object-isextensible: error */
+var extensible = Object.isExtensible(obj);
+```
 
 ## 📚 References
 

@@ -9,9 +9,10 @@ This rule reports ES2015 `Number.MIN_SAFE_INTEGER` property as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-number-minsafeinteger: error */
-const b = Number.MIN_SAFE_INTEGER
-" />
+```js
+/*eslint es-roikoren/no-number-minsafeinteger: error */
+const b = Number.MIN_SAFE_INTEGER;
+```
 
 ## 📚 References
 

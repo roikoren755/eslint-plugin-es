@@ -9,13 +9,14 @@ This rule reports ES2019 optional `catch` binding as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-optional-catch-binding: error */
+```js
+/*eslint es-roikoren/no-optional-catch-binding: error */
 try {
-    f()
+  f();
 } catch {
-    g()
+  g();
 }
-" />
+```
 
 ## 📚 References
 

@@ -9,9 +9,10 @@ This rule reports ES2015 `Proxy` class as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-proxy: error */
-let p = new Proxy(obj, hooks)
-" />
+```js
+/*eslint es-roikoren/no-proxy: error */
+let p = new Proxy(obj, hooks);
+```
 
 ## 📚 References
 

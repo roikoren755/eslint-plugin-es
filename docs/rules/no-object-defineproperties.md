@@ -9,9 +9,10 @@ This rule reports ES5 `Object.defineProperties` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-object-defineproperties: error */
-Object.defineProperties(obj, {})
-" />
+```js
+/*eslint es-roikoren/no-object-defineproperties: error */
+Object.defineProperties(obj, {});
+```
 
 ## 📚 References
 

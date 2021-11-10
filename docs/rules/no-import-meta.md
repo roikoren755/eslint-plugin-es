@@ -9,9 +9,10 @@ This rule reports ES2020 [import.meta](https://github.com/tc39/proposal-import-m
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-import-meta: error */
-import.meta
-" />
+```js
+/*eslint es-roikoren/no-import-meta: error */
+import.meta;
+```
 
 ## 📚 References
 

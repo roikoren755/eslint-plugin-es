@@ -9,9 +9,10 @@ This rule reports ES2015 binary numeric literals as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-binary-numeric-literals: error */
-let a = 0b1010
-" />
+```js
+/*eslint es-roikoren/no-binary-numeric-literals: error */
+let a = 0b1010;
+```
 
 ## 📚 References
 

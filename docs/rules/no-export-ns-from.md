@@ -9,9 +9,10 @@ This rule reports ES2020 [`export * as ns`](https://github.com/tc39/proposal-exp
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-export-ns-from: error */
-export * as ns from &quot;mod&quot;
-" />
+```js
+/*eslint es-roikoren/no-export-ns-from: error */
+export * as ns from 'mod';
+```
 
 ## 📚 References
 

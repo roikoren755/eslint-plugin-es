@@ -9,10 +9,11 @@ This rule reports ES5 trailing commas in array/object literals as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-trailing-commas: error */
-var a = [1, 2,]
-var b = { x: 1, y: 2, }
-" />
+```js
+/*eslint es-roikoren/no-trailing-commas: error */
+var a = [1, 2,];
+var b = { x: 1, y: 2, };
+```
 
 ## 📚 References
 

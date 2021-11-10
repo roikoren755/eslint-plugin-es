@@ -10,9 +10,10 @@ This rule reports ES2021 [numeric separators](https://github.com/tc39/proposal-n
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-numeric-separators: error */
-let a = 123_456
-" />
+```js
+/*eslint es-roikoren/no-numeric-separators: error */
+let a = 123_456;
+```
 
 ## 📚 References
 

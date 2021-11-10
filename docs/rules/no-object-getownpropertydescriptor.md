@@ -9,9 +9,10 @@ This rule reports ES5 `Object.getOwnPropertyDescriptor` method as errors.
 
 ⛔ Examples of **incorrect** code for this rule:
 
-<eslint-playground type="bad" code="/*eslint es-roikoren/no-object-getownpropertydescriptor: error */
-var descriptors = Object.getOwnPropertyDescriptor(obj)
-" />
+```js
+/*eslint es-roikoren/no-object-getownpropertydescriptor: error */
+var descriptors = Object.getOwnPropertyDescriptor(obj);
+```
 
 ## 📚 References
 
