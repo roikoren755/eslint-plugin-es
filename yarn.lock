@@ -1598,7 +1598,7 @@ eslint-module-utils@^2.7.1:
     pkg-dir "^2.0.0"
 
 "eslint-plugin-es-roikoren@file:.":
-  version "0.0.0"
+  version "0.0.1"
   dependencies:
     "@typescript-eslint/experimental-utils" "5.3.1"
     regexpp "3.2.0"

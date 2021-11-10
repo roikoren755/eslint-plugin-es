@@ -7,7 +7,7 @@ export const optionalRequire = <T>(originalRequire: (id: string) => T, id: strin
   try {
     return originalRequire(id);
   } catch (error) {
-    if ((error as { code?: string })?.code === 'MODULE_NOT_FOUND') {
+    if ((error as { code: string }).code === 'MODULE_NOT_FOUND') {
       // eslint-disable-next-line consistent-return
       return undefined;
     }
