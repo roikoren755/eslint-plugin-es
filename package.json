@@ -13,7 +13,8 @@
   "license": "MIT",
   "main": "./src/index.js",
   "files": [
-    "**/*.js"
+    "./src/**/*.js",
+    "./docs/**/*"
   ],
   "scripts": {
     "build": "tsc",
@@ -27,7 +28,7 @@
     "release": "changeset publish",
     "test": "nyc mocha tests/**/*.ts --reporter dot",
     "type": "tsc --noEmit --noImplicitAny",
-    "update": "yarn lint --fix && yarn update:configs && yarn update:index && yarn update:doc && yarn update:ruledocs",
+    "update": "yarn update:configs && yarn update:index && yarn update:doc && yarn update:ruledocs",
     "update:configs": "ts-node scripts/update-src-configs",
     "update:doc": "ts-node scripts/update-docs-readme",
     "update:index": "ts-node scripts/update-src-index",
