@@ -17,5 +17,5 @@ const u2029 = &quot;&#x2029;&quot; // a \u2029 is in this string
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.0/src/rules/no-json-superset.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.0/tests/src/rules/no-json-superset.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.1/src/rules/no-json-superset.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.1/tests/src/rules/no-json-superset.ts)

@@ -15,5 +15,5 @@ const r1 = /(?&lt;a&gt;b)c/
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.0/src/rules/no-regexp-named-capture-groups.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.0/tests/src/rules/no-regexp-named-capture-groups.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.1/src/rules/no-regexp-named-capture-groups.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.1/tests/src/rules/no-regexp-named-capture-groups.ts)
