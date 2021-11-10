@@ -1,13 +1,5 @@
 # eslint-plugin-es-roikoren
 
-## 0.0.0-alpha-20211010133854
-
-### Patch Changes
-
-- [`94a8eba`](https://github.com/roikoren755/eslint-plugin-es/commit/94a8eba1414290bf092b2543fed3b682651c9920) Thanks [@roikoren755](https://github.com/roikoren755)! - fix: publish
-
-- test
-
 ## 0.0.2
 
 ### Patch Changes
