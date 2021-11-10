@@ -62,7 +62,7 @@
     "eslint-import-resolver-typescript": "2.5.0",
     "eslint-plugin-es-roikoren": "file:.",
     "eslint-plugin-eslint-plugin": "4.0.2",
-    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-import": "2.25.3",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-unicorn": "38.0.1",
     "globals": "13.12.0",
