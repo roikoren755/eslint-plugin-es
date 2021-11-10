@@ -13,8 +13,9 @@
   "license": "MIT",
   "main": "./src/index.js",
   "files": [
-    "./src/**/*.js",
-    "./docs/**/*"
+    "src/**/*.js",
+    "src/**/*.d.ts",
+    "docs/**/*"
   ],
   "scripts": {
     "build": "tsc --project tsconfig.prod.json",
@@ -23,6 +24,7 @@
     "deduplicate": "yarn-deduplicate -s fewer",
     "lint": "eslint . --cache",
     "new": "ts-node scripts/new-rule",
+    "postrelease": "yarn clean",
     "prepare": "husky install",
     "prerelease": "yarn build",
     "release": "changeset publish",
