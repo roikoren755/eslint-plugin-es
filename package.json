@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-es-roikoren",
-  "version": "0.0.2",
+  "version": "0.0.0-alpha-20211010133854",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/roikoren755/eslint-plugin-es.git"
@@ -23,6 +23,7 @@
     "deduplicate": "yarn-deduplicate -s fewer",
     "lint": "eslint . --cache",
     "new": "ts-node scripts/new-rule",
+    "postrelease": "yarn clean",
     "prepare": "husky install",
     "prerelease": "yarn build",
     "release": "changeset publish",
