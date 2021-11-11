@@ -1,7 +1,7 @@
 # es-roikoren/no-weakrefs
 > disallow the `WeakRef` and `FinalizationRegistry` class.
 
-- ✅ The following configurations enable this rule: `plugin:es-roikoren/no-new-in-esnext`
+- ✅ The following configurations enable this rule: `plugin:es-roikoren/no-new-in-es2021`, `plugin:es-roikoren/restrict-to-es3`, `plugin:es-roikoren/restrict-to-es5`, `plugin:es-roikoren/restrict-to-es2015`, `plugin:es-roikoren/restrict-to-es2016`, `plugin:es-roikoren/restrict-to-es2017`, `plugin:es-roikoren/restrict-to-es2018`, `plugin:es-roikoren/restrict-to-es2019`, and `plugin:es-roikoren/restrict-to-es2020`
 
 This rule reports ES2021 [WeakRefs](https://github.com/tc39/proposal-weakrefs) as errors.
 This proposal includes the following two:

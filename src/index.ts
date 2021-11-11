@@ -9,6 +9,7 @@ import noNewInEs2017 from './configs/no-new-in-es2017';
 import noNewInEs2018 from './configs/no-new-in-es2018';
 import noNewInEs2019 from './configs/no-new-in-es2019';
 import noNewInEs2020 from './configs/no-new-in-es2020';
+import noNewInEs2021 from './configs/no-new-in-es2021';
 import noNewInEsnext from './configs/no-new-in-esnext';
 import restrictToEs3 from './configs/restrict-to-es3';
 import restrictToEs5 from './configs/restrict-to-es5';
@@ -17,6 +18,7 @@ import restrictToEs2016 from './configs/restrict-to-es2016';
 import restrictToEs2017 from './configs/restrict-to-es2017';
 import restrictToEs2018 from './configs/restrict-to-es2018';
 import restrictToEs2019 from './configs/restrict-to-es2019';
+import restrictToEs2020 from './configs/restrict-to-es2020';
 import noAccessorProperties from './rules/no-accessor-properties';
 import noArrayFrom from './rules/no-array-from';
 import noArrayIsarray from './rules/no-array-isarray';
@@ -47,6 +49,7 @@ import noBigint from './rules/no-bigint';
 import noBinaryNumericLiterals from './rules/no-binary-numeric-literals';
 import noBlockScopedFunctions from './rules/no-block-scoped-functions';
 import noBlockScopedVariables from './rules/no-block-scoped-variables';
+import noClassFields from './rules/no-class-fields';
 import noClasses from './rules/no-classes';
 import noComputedProperties from './rules/no-computed-properties';
 import noDateNow from './rules/no-date-now';
@@ -175,6 +178,7 @@ export default {
     'no-new-in-es2018': noNewInEs2018,
     'no-new-in-es2019': noNewInEs2019,
     'no-new-in-es2020': noNewInEs2020,
+    'no-new-in-es2021': noNewInEs2021,
     'no-new-in-esnext': noNewInEsnext,
     'restrict-to-es3': restrictToEs3,
     'restrict-to-es5': restrictToEs5,
@@ -183,6 +187,7 @@ export default {
     'restrict-to-es2017': restrictToEs2017,
     'restrict-to-es2018': restrictToEs2018,
     'restrict-to-es2019': restrictToEs2019,
+    'restrict-to-es2020': restrictToEs2020,
   },
   rules: {
     'no-accessor-properties': noAccessorProperties,
@@ -215,6 +220,7 @@ export default {
     'no-binary-numeric-literals': noBinaryNumericLiterals,
     'no-block-scoped-functions': noBlockScopedFunctions,
     'no-block-scoped-variables': noBlockScopedVariables,
+    'no-class-fields': noClassFields,
     'no-classes': noClasses,
     'no-computed-properties': noComputedProperties,
     'no-date-now': noDateNow,

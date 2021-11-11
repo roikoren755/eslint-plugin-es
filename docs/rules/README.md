@@ -4,9 +4,17 @@ This plugin provides the following rules.
 
 - 🔧 mark means that the `--fix` option on the [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) can automatically fix some of the problems reported by the rule.
 
-## ES2021
+## ES2022
 
 There is a config that enables the rules in this category: `plugin:es-roikoren/no-new-in-esnext`
+
+| Rule ID | Description |    |
+|:--------|:------------|:--:|
+| [es-roikoren/no-class-fields](./no-class-fields.md) | disallow class fields. |  |
+
+## ES2021
+
+There are multiple configs that enable all rules in this category: `plugin:es-roikoren/no-new-in-es2021`, `plugin:es-roikoren/restrict-to-es3`, `plugin:es-roikoren/restrict-to-es5`, `plugin:es-roikoren/restrict-to-es2015`, `plugin:es-roikoren/restrict-to-es2016`, `plugin:es-roikoren/restrict-to-es2017`, `plugin:es-roikoren/restrict-to-es2018`, `plugin:es-roikoren/restrict-to-es2019`, and `plugin:es-roikoren/restrict-to-es2020`
 
 | Rule ID | Description |    |
 |:--------|:------------|:--:|

@@ -10,7 +10,7 @@ This rule reports ES5 `Function.prototype.bind` method as errors.
 ⛔ Examples of **incorrect** code for this rule:
 
 ```js
-/*eslint es-roikoren/no-function-prototype-bind: error */
+/*eslint es-roikoren/no-function-prototype-bind: [error, { aggressive: true }] */
 foo.bind(this);
 
 var foo = (function() {

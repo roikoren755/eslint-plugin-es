@@ -19,16 +19,11 @@ export interface ICategory {
   experimental?: boolean;
 }
 
-const categories = [12, 11, 10, 9, 8, 7, 6, 5].reduce<Record<string, ICategory>>((map, revision, _, [latest]) => {
+const categories = [13, 12, 11, 10, 9, 8, 7, 6, 5].reduce<Record<string, ICategory>>((map, revision, _, [latest]) => {
   const year = revision <= 5 ? 5 : 2009 + revision;
   const id = `ES${year}`;
 
-  map[id] = {
-    id,
-    revision,
-    rules: [],
-    experimental: revision === latest,
-  };
+  map[id] = { id, revision, rules: [], experimental: revision === latest };
 
   return map;
 }, {});
@@ -59,11 +54,7 @@ const rules: IRule[] = [];
       },
     } = content;
     const description = docs?.description;
-    const rule = {
-      ruleId,
-      description: description ?? '',
-      fixable: !!fixable,
-    };
+    const rule = { ruleId, description: description ?? '', fixable: !!fixable };
 
     if (category) {
       categories[category].rules.push(rule);

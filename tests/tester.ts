@@ -4,6 +4,10 @@ import semver from 'semver';
 
 const eslintVersion = new TSESLint.Linter().version;
 const getEcmaVersion = (): TSESLint.EcmaVersion => {
+  if (semver.gte(eslintVersion, '8.0.0')) {
+    return 2022;
+  }
+
   if (semver.gte(eslintVersion, '7.8.0')) {
     return 2021;
   }

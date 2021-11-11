@@ -25,7 +25,7 @@ const run = async (ruleId: string): Promise<void> => {
     ruleFile,
     `import { createRule } from '../util/create-rule';
 
-export const category = 'ES2021';
+export const category = 'ES2022';
 export default createRule<[], 'forbidden'>({
   name: '${ruleId}',
   meta: {
@@ -46,7 +46,7 @@ export default createRule<[], 'forbidden'>({
     `import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/${ruleId}';
 
-if (!RuleTester.isSupported(2021)) {
+if (!RuleTester.isSupported(2022)) {
   console.log('Skip the tests of ${ruleId}.');
 } else {
   new RuleTester().run('${ruleId}', rule, {

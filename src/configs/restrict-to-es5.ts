@@ -4,6 +4,7 @@
  */
 export default {
   extends: [
+    require.resolve('./no-new-in-es2021'),
     require.resolve('./no-new-in-es2020'),
     require.resolve('./no-new-in-es2019'),
     require.resolve('./no-new-in-es2018'),
