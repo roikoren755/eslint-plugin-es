@@ -3,7 +3,7 @@ import type { TSESLint } from '@typescript-eslint/experimental-utils';
 
 export const referenceTracker = (
   context: TSESLint.RuleContext<'forbidden', readonly []>,
-  traceMap: ASTUtils.ReferenceTracker.TraceMap<boolean>,
+  traceMap: ASTUtils.ReferenceTracker.TraceMap<true>,
 ): TSESLint.RuleListener => ({
   'Program:exit'() {
     const tracker = new ASTUtils.ReferenceTracker(context.getScope());

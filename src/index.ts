@@ -111,6 +111,7 @@ import noObjectGetownpropertydescriptors from './rules/no-object-getownpropertyd
 import noObjectGetownpropertynames from './rules/no-object-getownpropertynames';
 import noObjectGetownpropertysymbols from './rules/no-object-getownpropertysymbols';
 import noObjectGetprototypeof from './rules/no-object-getprototypeof';
+import noObjectHasown from './rules/no-object-hasown';
 import noObjectIs from './rules/no-object-is';
 import noObjectIsextensible from './rules/no-object-isextensible';
 import noObjectIsfrozen from './rules/no-object-isfrozen';
@@ -283,6 +284,7 @@ export default {
     'no-object-getownpropertynames': noObjectGetownpropertynames,
     'no-object-getownpropertysymbols': noObjectGetownpropertysymbols,
     'no-object-getprototypeof': noObjectGetprototypeof,
+    'no-object-hasown': noObjectHasown,
     'no-object-is': noObjectIs,
     'no-object-isextensible': noObjectIsextensible,
     'no-object-isfrozen': noObjectIsfrozen,
