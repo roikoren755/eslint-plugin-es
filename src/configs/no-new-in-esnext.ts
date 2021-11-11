@@ -6,6 +6,7 @@ export default {
   plugins: ['es-roikoren'],
   rules: {
     'es-roikoren/no-class-fields': 'error',
+    'es-roikoren/no-class-static-block': 'error',
     'es-roikoren/no-object-hasown': 'error',
     'es-roikoren/no-regexp-d-flag': 'error',
   },

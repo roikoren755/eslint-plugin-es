@@ -50,6 +50,7 @@ import noBinaryNumericLiterals from './rules/no-binary-numeric-literals';
 import noBlockScopedFunctions from './rules/no-block-scoped-functions';
 import noBlockScopedVariables from './rules/no-block-scoped-variables';
 import noClassFields from './rules/no-class-fields';
+import noClassStaticBlock from './rules/no-class-static-block';
 import noClasses from './rules/no-classes';
 import noComputedProperties from './rules/no-computed-properties';
 import noDateNow from './rules/no-date-now';
@@ -223,6 +224,7 @@ export default {
     'no-block-scoped-functions': noBlockScopedFunctions,
     'no-block-scoped-variables': noBlockScopedVariables,
     'no-class-fields': noClassFields,
+    'no-class-static-block': noClassStaticBlock,
     'no-classes': noClasses,
     'no-computed-properties': noComputedProperties,
     'no-date-now': noDateNow,
