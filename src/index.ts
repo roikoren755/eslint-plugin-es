@@ -131,6 +131,7 @@ import noPromisePrototypeFinally from './rules/no-promise-prototype-finally';
 import noPropertyShorthands from './rules/no-property-shorthands';
 import noProxy from './rules/no-proxy';
 import noReflect from './rules/no-reflect';
+import noRegexpDFlag from './rules/no-regexp-d-flag';
 import noRegexpLookbehindAssertions from './rules/no-regexp-lookbehind-assertions';
 import noRegexpNamedCaptureGroups from './rules/no-regexp-named-capture-groups';
 import noRegexpPrototypeFlags from './rules/no-regexp-prototype-flags';
@@ -302,6 +303,7 @@ export default {
     'no-property-shorthands': noPropertyShorthands,
     'no-proxy': noProxy,
     'no-reflect': noReflect,
+    'no-regexp-d-flag': noRegexpDFlag,
     'no-regexp-lookbehind-assertions': noRegexpLookbehindAssertions,
     'no-regexp-named-capture-groups': noRegexpNamedCaptureGroups,
     'no-regexp-prototype-flags': noRegexpPrototypeFlags,

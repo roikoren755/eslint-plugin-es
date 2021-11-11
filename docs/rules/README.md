@@ -11,6 +11,7 @@ There is a config that enables the rules in this category: `plugin:es-roikoren/n
 | Rule ID | Description |    |
 |:--------|:------------|:--:|
 | [es-roikoren/no-class-fields](./no-class-fields.md) | disallow class fields. |  |
+| [es-roikoren/no-regexp-d-flag](./no-regexp-d-flag.md) | disallow RegExp `d` flag. |  |
 
 ## ES2021
 

@@ -53,8 +53,8 @@ const rules: IRule[] = [];
         meta: { docs, fixable },
       },
     } = content;
-    const description = docs?.description;
-    const rule = { ruleId, description: description ?? '', fixable: !!fixable };
+    const description = docs?.description ?? '';
+    const rule = { ruleId, description, fixable: !!fixable };
 
     if (category) {
       categories[category].rules.push(rule);
