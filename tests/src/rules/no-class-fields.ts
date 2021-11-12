@@ -11,7 +11,7 @@ const error = (nameWithKind: string, isPublic?: boolean): TSESLint.TestCaseError
   data: { nameWithKind },
 });
 
-if (!RuleTester.isSupported(2021)) {
+if (!RuleTester.isSupported(2022)) {
   console.log('Skip the tests of no-class-fields.');
 } else {
   new RuleTester().run('no-class-fields', rule, {
