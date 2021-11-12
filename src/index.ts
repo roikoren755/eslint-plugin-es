@@ -41,6 +41,7 @@ import noArrayPrototypeReduce from './rules/no-array-prototype-reduce';
 import noArrayPrototypeReduceright from './rules/no-array-prototype-reduceright';
 import noArrayPrototypeSome from './rules/no-array-prototype-some';
 import noArrayPrototypeValues from './rules/no-array-prototype-values';
+import noArrayStringPrototypeAt from './rules/no-array-string-prototype-at';
 import noArrowFunctions from './rules/no-arrow-functions';
 import noAsyncFunctions from './rules/no-async-functions';
 import noAsyncIteration from './rules/no-async-iteration';
@@ -215,6 +216,7 @@ export default {
     'no-array-prototype-reduceright': noArrayPrototypeReduceright,
     'no-array-prototype-some': noArrayPrototypeSome,
     'no-array-prototype-values': noArrayPrototypeValues,
+    'no-array-string-prototype-at': noArrayStringPrototypeAt,
     'no-arrow-functions': noArrowFunctions,
     'no-async-functions': noAsyncFunctions,
     'no-async-iteration': noAsyncIteration,

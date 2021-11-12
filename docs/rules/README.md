@@ -10,6 +10,7 @@ There is a config that enables the rules in this category: `plugin:es-roikoren/n
 
 | Rule ID | Description |    |
 |:--------|:------------|:--:|
+| [es-roikoren/no-array-string-prototype-at](./no-array-string-prototype-at.md) | disallow the `{Array,String,TypedArray}.prototype.at()` methods. |  |
 | [es-roikoren/no-class-fields](./no-class-fields.md) | disallow class fields. |  |
 | [es-roikoren/no-class-static-block](./no-class-static-block.md) | disallow class static block. |  |
 | [es-roikoren/no-object-hasown](./no-object-hasown.md) | disallow the `Object.hasOwn` method. |  |
