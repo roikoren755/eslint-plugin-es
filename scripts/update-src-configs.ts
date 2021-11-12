@@ -28,15 +28,22 @@ export default ${code};
 
 const run = async (): Promise<void> => {
   for (const { experimental, revision, rules } of Object.values(categories)) {
-    const ruleSetting = rules.map((r) => `'es-roikoren/${r.ruleId}':'error'`).join(',');
+    const ruleSetting = rules
+      .map((r) => `'es-roikoren/${r.ruleId}':'${revision === 'typescript' ? 'off' : 'error'}'`)
+      .join(',');
     const extendSetting = Object.values(categories)
-      .filter((c) => c.revision >= revision && !c.experimental)
-      .map((c) => `require.resolve('./${configNameToDisallowNewIn(c.revision)}')`)
+      .filter((c) => c.revision !== 'typescript' && c.revision >= revision && !c.experimental)
+      .map((c) => `require.resolve('./${configNameToDisallowNewIn(c.revision as number)}')`)
       .join(',');
 
     if (experimental) {
       writeFileSync(
         path.join(Root, 'no-new-in-esnext.ts'),
+        wrapCode(`{ plugins: ['es-roikoren'], rules: { ${ruleSetting} } }`),
+      );
+    } else if (revision === 'typescript') {
+      writeFileSync(
+        path.join(Root, `typescript.ts`),
         wrapCode(`{ plugins: ['es-roikoren'], rules: { ${ruleSetting} } }`),
       );
     } else {

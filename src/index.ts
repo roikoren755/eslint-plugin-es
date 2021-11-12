@@ -19,6 +19,7 @@ import restrictToEs2017 from './configs/restrict-to-es2017';
 import restrictToEs2018 from './configs/restrict-to-es2018';
 import restrictToEs2019 from './configs/restrict-to-es2019';
 import restrictToEs2020 from './configs/restrict-to-es2020';
+import typescript from './configs/typescript';
 import noAccessorProperties from './rules/no-accessor-properties';
 import noArrayFrom from './rules/no-array-from';
 import noArrayIsarray from './rules/no-array-isarray';
@@ -192,6 +193,7 @@ export default {
     'restrict-to-es2018': restrictToEs2018,
     'restrict-to-es2019': restrictToEs2019,
     'restrict-to-es2020': restrictToEs2020,
+    typescript,
   },
   rules: {
     'no-accessor-properties': noAccessorProperties,

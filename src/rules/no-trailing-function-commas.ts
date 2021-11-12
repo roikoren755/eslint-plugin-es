@@ -4,6 +4,7 @@ import { createRule } from '../util/create-rule';
 import { isCommaToken } from '../util/is-comma-token';
 
 export const category = 'ES2017';
+export const typescript = true;
 export default createRule<[], 'forbidden'>({
   name: 'no-trailing-function-commas',
   meta: {

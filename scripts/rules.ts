@@ -11,22 +11,24 @@ export interface IRule {
 }
 
 export interface ICategory {
-  id: string;
-  revision: number;
+  revision: number | 'typescript';
   configName?: string;
   aboveConfigName?: string;
   rules: IRule[];
   experimental?: boolean;
 }
 
-const categories = [13, 12, 11, 10, 9, 8, 7, 6, 5].reduce<Record<string, ICategory>>((map, revision, _, [latest]) => {
-  const year = revision <= 5 ? 5 : 2009 + revision;
-  const id = `ES${year}`;
+const categories = [13, 12, 11, 10, 9, 8, 7, 6, 5].reduce<Record<string, ICategory>>(
+  (map, revision, _, [latest]) => {
+    const year = revision <= 5 ? 5 : 2009 + revision;
+    const id = `ES${year}`;
 
-  map[id] = { id, revision, rules: [], experimental: revision === latest };
+    map[id] = { revision, rules: [], experimental: revision === latest };
 
-  return map;
-}, {});
+    return map;
+  },
+  { typescript: { revision: 'typescript', rules: [] } },
+);
 
 const rules: IRule[] = [];
 
@@ -45,6 +47,7 @@ const rules: IRule[] = [];
     const content = require(path.join(dirPath, entry.name)) as {
       default: TSESLint.RuleModule<'forbidden', []>;
       category: string;
+      typescript?: boolean;
     };
 
     const {
@@ -52,12 +55,17 @@ const rules: IRule[] = [];
       default: {
         meta: { docs, fixable },
       },
+      typescript,
     } = content;
     const description = docs?.description ?? '';
     const rule = { ruleId, description, fixable: !!fixable };
 
     if (category) {
       categories[category].rules.push(rule);
+    }
+
+    if (typescript) {
+      categories.typescript.rules.push(rule);
     }
 
     rules.push(rule);

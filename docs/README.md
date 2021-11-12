@@ -107,6 +107,7 @@ This plugin provides the following configs.
 | `plugin:es-roikoren/no-new-in-es2015` | disallow the new stuff in ES2015. |
 | `plugin:es-roikoren/no-new-in-es5` | disallow the new stuff in ES5. |
 | `plugin:es-roikoren/no-new-in-esnext` | disallow the new stuff to be planned for the next yearly ECMAScript snapshot.<br>⚠️ This config will be changed in the minor versions of this plugin. |
+| `plugin:es-roikoren/typescript` | turn off rules for stuff that TypeScript transpiles correctly, regardless of target ES version. |
 <!-- PRESETS_TABLE_END -->
 
 For example:

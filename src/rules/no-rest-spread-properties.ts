@@ -3,6 +3,7 @@ import type { TSESTree } from '@typescript-eslint/typescript-estree';
 import { createRule } from '../util/create-rule';
 
 export const category = 'ES2018';
+export const typescript = true;
 export default createRule<[], 'forbidden'>({
   name: 'no-rest-spread-properties',
   meta: {

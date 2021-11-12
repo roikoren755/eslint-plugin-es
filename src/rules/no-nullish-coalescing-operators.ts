@@ -11,6 +11,7 @@ const isNullishCoalescingOperator = (token: TSESTree.Token): boolean =>
   token.value === '??' && token.type === 'Punctuator';
 
 export const category = 'ES2020';
+export const typescript = true;
 export default createRule<[], 'forbidden'>({
   name: 'no-nullish-coalescing-operators',
   meta: {

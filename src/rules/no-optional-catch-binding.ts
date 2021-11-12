@@ -2,6 +2,7 @@ import { createRule } from '../util/create-rule';
 import type { TSESTree } from '@typescript-eslint/typescript-estree';
 
 export const category = 'ES2019';
+export const typescript = true;
 export default createRule<[], 'forbidden'>({
   name: 'no-optional-catch-binding',
   meta: {

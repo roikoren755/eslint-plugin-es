@@ -108,6 +108,7 @@ ${toTable(categories[categoryId])}
 
 // Convert categories to rules/README sections
 const ruleSectionContent = Object.keys(categories)
+  .filter((category) => category !== 'typescript')
   .map((category) => toSection(category))
   .join('\n');
 
@@ -125,6 +126,14 @@ ${ruleSectionContent}
 );
 
 const compareConfigId = (a: IConfig, b: IConfig): number => {
+  if (a.id.includes('typescript')) {
+    return 1;
+  }
+
+  if (b.id.includes('typescript')) {
+    return -1;
+  }
+
   if (a.kind !== b.kind) {
     if (a.kind === 'restrict-to') {
       return -1;
@@ -156,7 +165,9 @@ const compareConfigId = (a: IConfig, b: IConfig): number => {
 const toPresetConfigTableRow = (config: IConfig): string => {
   let description = `disallow the new stuff in ES${config.es}.`;
 
-  if (config.kind === 'restrict-to') {
+  if (config.id.includes('typescript')) {
+    description = 'turn off rules for stuff that TypeScript transpiles correctly, regardless of target ES version.';
+  } else if (config.kind === 'restrict-to') {
     description = `disallow new stuff that ES${config.es} doesn't include.`;
   } else if (config.es === 'NEXT') {
     description =

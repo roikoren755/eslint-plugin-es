@@ -46,7 +46,7 @@ const run = async (): Promise<void> => {
       .replace(/## 📚 References[\s\S]+/u, '')
       .trim();
     const enabledConfigIds = configs
-      .filter((c) => c.ruleIds.has(`es-roikoren/${ruleId}`))
+      .filter((c) => !c.id.includes('typescript') && c.ruleIds.has(`es-roikoren/${ruleId}`))
       .map((c) => `\`${c.id}\``)
       .sort(collator.compare.bind(collator));
     const headerLines = [`# es-roikoren/${ruleId}`, `> ${description}`, ''];
