@@ -1,5 +1,31 @@
 # eslint-plugin-es-roikoren
 
+## 0.0.4
+
+### Patch Changes
+
+- [`72f1c53`](https://github.com/roikoren755/eslint-plugin-es/commit/72f1c53e41bb7fabf8f0fcff7da5cea7f5b75991) Thanks [@roikoren755](https://github.com/roikoren755)! - test: fix `es-roikoren/no-class-fields` tests
+
+- [`0f152c9`](https://github.com/roikoren755/eslint-plugin-es/commit/0f152c9d1969b4bd15f2d19540c670af23f06c40) Thanks [@roikoren755](https://github.com/roikoren755)! - feat: add `es-roikoren/no-array-string-prototype-at` rule
+
+- [`7d904a2`](https://github.com/roikoren755/eslint-plugin-es/commit/7d904a244e4da7ae4b838ebef5e0d605e89dfcfd) Thanks [@roikoren755](https://github.com/roikoren755)! - feat: add `es-roikoren/no-class-static-block` rule
+
+- [`2238048`](https://github.com/roikoren755/eslint-plugin-es/commit/223804847978a362c9486a440bdc233eb4f089a0) Thanks [@roikoren755](https://github.com/roikoren755)! - feat: add `es-roikoren/no-object-create` rule
+
+- [`8d98774`](https://github.com/roikoren755/eslint-plugin-es/commit/8d987740f3a29df3be5ab485c58732095db2ccac) Thanks [@roikoren755](https://github.com/roikoren755)! - docs: update docs generator
+
+- [`f425126`](https://github.com/roikoren755/eslint-plugin-es/commit/f425126bc64a5be83509918952e9937e6941a37b) Thanks [@roikoren755](https://github.com/roikoren755)! - feat: add `es-roikoren/no-regexp-d-flag` rule
+
+- [`f8c187b`](https://github.com/roikoren755/eslint-plugin-es/commit/f8c187b8567616ce25bbc599189ffc6411bf84e3) Thanks [@roikoren755](https://github.com/roikoren755)! - test: correctly skip `no-class-fields` when needed
+
+- [`75ff4d1`](https://github.com/roikoren755/eslint-plugin-es/commit/75ff4d1ec862b3f3dda0df154ec1b0d9a2e18c45) Thanks [@roikoren755](https://github.com/roikoren755)! - feat: add `es-roikoren/no-class-fields` rule
+
+- [`b5b001c`](https://github.com/roikoren755/eslint-plugin-es/commit/b5b001c9cb1e2d8ab44f1dc33a263aef7eb8437b) Thanks [@roikoren755](https://github.com/roikoren755)! - feat: add `typescript` config
+
+- [`0c05740`](https://github.com/roikoren755/eslint-plugin-es/commit/0c0574052d4cb0aed4ac7812823c0e741a2eaff9) Thanks [@roikoren755](https://github.com/roikoren755)! - feat: add `es-roikoren/no-function-prototype-bind` rule
+
+- [`9b40bb3`](https://github.com/roikoren755/eslint-plugin-es/commit/9b40bb39129c5fd6d6c572f4f6a5dbbd44e9584b) Thanks [@roikoren755](https://github.com/roikoren755)! - feat: add `es-roikoren/no-object-hasown` rule
+
 ## 0.0.3
 
 ### Patch Changes

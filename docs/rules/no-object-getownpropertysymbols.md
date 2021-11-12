@@ -16,5 +16,5 @@ const symbols = Object.getOwnPropertySymbols(obj);
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.3/src/rules/no-object-getownpropertysymbols.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.3/tests/src/rules/no-object-getownpropertysymbols.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.4/src/rules/no-object-getownpropertysymbols.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.4/tests/src/rules/no-object-getownpropertysymbols.ts)
