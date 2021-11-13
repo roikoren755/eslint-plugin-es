@@ -166,6 +166,7 @@ import noSubclassingBuiltins from './rules/no-subclassing-builtins';
 import noSymbol from './rules/no-symbol';
 import noSymbolPrototypeDescription from './rules/no-symbol-prototype-description';
 import noTemplateLiterals from './rules/no-template-literals';
+import noTopLevelAwait from './rules/no-top-level-await';
 import noTrailingCommas from './rules/no-trailing-commas';
 import noTrailingFunctionCommas from './rules/no-trailing-function-commas';
 import noTypedArrays from './rules/no-typed-arrays';
@@ -342,6 +343,7 @@ export default {
     'no-symbol': noSymbol,
     'no-symbol-prototype-description': noSymbolPrototypeDescription,
     'no-template-literals': noTemplateLiterals,
+    'no-top-level-await': noTopLevelAwait,
     'no-trailing-commas': noTrailingCommas,
     'no-trailing-function-commas': noTrailingFunctionCommas,
     'no-typed-arrays': noTypedArrays,

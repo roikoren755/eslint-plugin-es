@@ -10,5 +10,6 @@ export default {
     'es-roikoren/no-class-static-block': 'error',
     'es-roikoren/no-object-hasown': 'error',
     'es-roikoren/no-regexp-d-flag': 'error',
+    'es-roikoren/no-top-level-await': 'error',
   },
 };
