@@ -1,9 +1,9 @@
 import { createRule } from '../util/create-rule';
 import { definePrototypeMethodHandler, schema } from '../util/define-prototype-method-handler';
-import type { IAggressive } from '../util/define-prototype-method-handler';
+import type { Options } from '../util/define-prototype-method-handler';
 
 export const category = 'ES2015';
-export default createRule<[options: IAggressive], 'forbidden'>({
+export default createRule<Options, 'forbidden'>({
   name: 'no-string-prototype-endswith',
   meta: {
     type: 'problem',
@@ -12,7 +12,7 @@ export default createRule<[options: IAggressive], 'forbidden'>({
     messages: { forbidden: "ES2015 '{{name}}' method is forbidden." },
   },
   defaultOptions: [{}],
-  create(context) {
-    return definePrototypeMethodHandler(context, { String: ['endsWith'] });
+  create(context, options) {
+    return definePrototypeMethodHandler(context, options, { String: ['endsWith'] });
   },
 });

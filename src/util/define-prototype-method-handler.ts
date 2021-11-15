@@ -14,16 +14,19 @@ export interface IAggressive {
   aggressive?: boolean;
 }
 
+export type Options = readonly [options: IAggressive];
+
 /**
  * Get `aggressive` option value.
  * @param {RuleContext} context The rule context.
+ * @param {Options} appliedOptions The rule options.
  * @returns {boolean} The gotten `aggressive` option value.
  */
-const getAggressiveOption = (context: TSESLint.RuleContext<string, [options: IAggressive]>): boolean => {
-  const [options] = context.options;
+const getAggressiveOption = (context: TSESLint.RuleContext<string, Options>, appliedOptions: Options): boolean => {
+  const [options] = appliedOptions;
   const globalOptions = context.settings.es;
 
-  if (options && typeof options.aggressive === 'boolean') {
+  if (typeof options.aggressive === 'boolean') {
     return options.aggressive;
   }
 
@@ -329,15 +332,17 @@ const checkObjectType = (memberAccessNode: TSESTree.MemberExpression, className:
 
 /**
  * Define handlers to disallow prototype methods.
- * @param {TSESLint.RuleContext<'forbidden', readonly []>} context The rule context.
+ * @param {TSESLint.RuleContext<'forbidden', Options>} context The rule context.
+ * @param {Options} appliedOptions The rule options.
  * @param {Record<string, readonly string[]>} nameMap The method names to disallow. The key is class names and that value is method names.
  * @returns {TSESLint.RuleFunction} The defined handlers.
  */
 export const definePrototypeMethodHandler = (
-  context: TSESLint.RuleContext<'forbidden', [options: IAggressive]>,
+  context: TSESLint.RuleContext<'forbidden', Options>,
+  appliedOptions: Options,
   nameMap: Record<string, readonly string[]>,
 ): TSESLint.RuleListener => {
-  const aggressive = getAggressiveOption(context);
+  const aggressive = getAggressiveOption(context, appliedOptions);
 
   const tsNodeMap = context.parserServices?.esTreeNodeToTSNodeMap;
   const checker = context.parserServices?.program?.getTypeChecker();
