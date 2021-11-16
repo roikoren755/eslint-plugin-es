@@ -41,7 +41,7 @@
     "prettier": "2.4.1"
   },
   "dependencies": {
-    "@typescript-eslint/experimental-utils": "5.3.1",
+    "@typescript-eslint/experimental-utils": "5.4.0",
     "regexpp": "3.2.0"
   },
   "devDependencies": {
@@ -49,16 +49,15 @@
     "@changesets/cli": "2.18.0",
     "@commitlint/cli": "14.1.0",
     "@commitlint/config-conventional": "14.1.0",
-    "@types/eslint": "7.28.2",
     "@types/is-core-module": "2.2.0",
     "@types/minimatch": "3.0.5",
     "@types/resolve": "1.20.1",
     "@types/semver": "7.3.9",
-    "@typescript-eslint/eslint-plugin": "5.3.1",
-    "@typescript-eslint/parser": "5.3.1",
-    "@typescript-eslint/types": "5.3.1",
-    "@typescript-eslint/typescript-estree": "5.3.1",
-    "camelcase": "6.2.0",
+    "@typescript-eslint/eslint-plugin": "5.4.0",
+    "@typescript-eslint/parser": "5.4.0",
+    "@typescript-eslint/types": "5.4.0",
+    "@typescript-eslint/typescript-estree": "5.4.0",
+    "camelcase": "6.2.1",
     "eslint": "8.2.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-import-resolver-alias": "1.1.2",
