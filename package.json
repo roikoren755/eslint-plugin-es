@@ -47,8 +47,8 @@
   "devDependencies": {
     "@changesets/changelog-github": "0.4.1",
     "@changesets/cli": "2.18.0",
-    "@commitlint/cli": "14.1.0",
-    "@commitlint/config-conventional": "14.1.0",
+    "@commitlint/cli": "15.0.0",
+    "@commitlint/config-conventional": "15.0.0",
     "@types/is-core-module": "2.2.0",
     "@types/minimatch": "3.0.5",
     "@types/resolve": "1.20.1",
