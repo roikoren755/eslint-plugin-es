@@ -45,7 +45,7 @@ const rules: IRule[] = [];
 
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const content = require(path.join(dirPath, entry.name)) as {
-      default: TSESLint.RuleModule<'forbidden', []>;
+      default: TSESLint.RuleModule<'forbidden'>;
       category: string;
       typescript?: boolean;
     };

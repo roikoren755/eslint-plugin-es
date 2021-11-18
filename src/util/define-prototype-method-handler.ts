@@ -18,7 +18,7 @@ export type Options = readonly [options: IAggressive];
 
 /**
  * Get `aggressive` option value.
- * @param {RuleContext} context The rule context.
+ * @param {TSESLint.RuleContext<string, Options>} context The rule context.
  * @param {Options} appliedOptions The rule options.
  * @returns {boolean} The gotten `aggressive` option value.
  */
@@ -159,10 +159,10 @@ const typeSymbolEscapedNameEquals = (type: TypeScript.InterfaceType, className: 
 
 interface IOptions {
   aggressive: boolean;
-  checker?: TypeScript.TypeChecker | undefined;
+  checker?: TypeScript.TypeChecker;
   hasFullType: boolean;
   isTS: boolean;
-  tsNodeMap?: ParserServices['esTreeNodeToTSNodeMap'] | undefined;
+  tsNodeMap?: ParserServices['esTreeNodeToTSNodeMap'];
 }
 
 /**
