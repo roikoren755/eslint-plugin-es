@@ -29,7 +29,7 @@
     "prerelease": "yarn build",
     "release": "changeset publish",
     "test": "nyc mocha tests/**/*.ts --reporter dot",
-    "type": "tsc --noEmit --noImplicitAny",
+    "type": "tsc",
     "update": "yarn update:configs && yarn update:index && yarn update:doc && yarn update:ruledocs",
     "update:configs": "ts-node scripts/update-src-configs",
     "update:doc": "ts-node scripts/update-docs-readme",
