@@ -58,7 +58,7 @@
     "@typescript-eslint/types": "5.4.0",
     "@typescript-eslint/typescript-estree": "5.4.0",
     "camelcase": "6.2.1",
-    "eslint": "8.2.0",
+    "eslint": "8.3.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-import-resolver-alias": "1.1.2",
     "eslint-import-resolver-typescript": "2.5.0",
