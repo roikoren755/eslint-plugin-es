@@ -55,10 +55,9 @@ yarn add -D eslint eslint-plugin-es-roikoren
 
 If you installed `eslint` globally, you should install this plugin in the same way.
 
-::: tip Requirements
+**Requirements**
 - Node.js `12.22.0` or newer.
 - ESLint `5.16.0` or newer.
-  :::
 
 ## 📖 Usage
 

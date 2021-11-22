@@ -1,5 +1,27 @@
 # eslint-plugin-es-roikoren
 
+## 0.0.6
+
+### Patch Changes
+
+- [`22cd008`](https://github.com/roikoren755/eslint-plugin-es/commit/22cd0086369f9481b438bc101f6c335a7ba5e394) Thanks [@roikoren755](https://github.com/roikoren755)! - chore: updates and fixes
+
+## 0.0.5
+
+### Patch Changes
+
+- [`ab12626`](https://github.com/roikoren755/eslint-plugin-es/commit/ab12626b4e8c25905c1c512056404846c8738a83) Thanks [@roikoren755](https://github.com/roikoren755)! - fix: properly use `@typescript-eslint/experimental-utils`' default options
+
+- [`f8b83da`](https://github.com/roikoren755/eslint-plugin-es/commit/f8b83dad97179ce2497b824ae7555646ce691038) Thanks [@roikoren755](https://github.com/roikoren755)! - fix: update deps, new rule script
+
+- [#22](https://github.com/roikoren755/eslint-plugin-es/pull/22) [`9ab1941`](https://github.com/roikoren755/eslint-plugin-es/commit/9ab1941866b5923941bbc635f6f33a452dba297f) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency lint-staged to v12.0.3
+
+- [#13](https://github.com/roikoren755/eslint-plugin-es/pull/13) [`75c7e5c`](https://github.com/roikoren755/eslint-plugin-es/commit/75c7e5c4361f372c3c339888395d2c041b6adf33) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency lint-staged to v12
+
+- [#14](https://github.com/roikoren755/eslint-plugin-es/pull/14) [`6dd101e`](https://github.com/roikoren755/eslint-plugin-es/commit/6dd101eb5698ac7fca30c4b58d895470938e0658) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency lint-staged to v12.0.2
+
+- [`e8bf133`](https://github.com/roikoren755/eslint-plugin-es/commit/e8bf1332da595b7d5459dddc79d1ab56afbd688c) Thanks [@roikoren755](https://github.com/roikoren755)! - chore: fix lint, update deps
+
 ## 0.0.4
 
 ### Patch Changes
