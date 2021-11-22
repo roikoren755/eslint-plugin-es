@@ -18,7 +18,7 @@ export interface ICategory {
   experimental?: boolean;
 }
 
-const categories = [13, 12, 11, 10, 9, 8, 7, 6, 5].reduce<Record<string, ICategory>>(
+export const categories = [13, 12, 11, 10, 9, 8, 7, 6, 5].reduce<Record<string, ICategory>>(
   (map, revision, _, [latest]) => {
     const year = revision <= 5 ? 5 : 2009 + revision;
     const id = `ES${year}`;
@@ -30,7 +30,7 @@ const categories = [13, 12, 11, 10, 9, 8, 7, 6, 5].reduce<Record<string, ICatego
   { typescript: { revision: 'typescript', rules: [] } },
 );
 
-const rules: IRule[] = [];
+export const rules: IRule[] = [];
 
 (function walk(dirPath) {
   for (const entry of readdirSync(dirPath, { withFileTypes: true })) {
@@ -71,5 +71,3 @@ const rules: IRule[] = [];
     rules.push(rule);
   }
 })(libRoot);
-
-export { categories, rules };

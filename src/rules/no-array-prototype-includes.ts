@@ -1,9 +1,9 @@
 import { createRule } from '../util/create-rule';
 import { definePrototypeMethodHandler, schema } from '../util/define-prototype-method-handler';
-import type { IAggressive } from '../util/define-prototype-method-handler';
+import type { Options } from '../util/define-prototype-method-handler';
 
 export const category = 'ES2016';
-export default createRule<[options: IAggressive], 'forbidden'>({
+export default createRule<Options, 'forbidden'>({
   name: 'no-array-prototype-includes',
   meta: {
     type: 'problem',
@@ -12,8 +12,8 @@ export default createRule<[options: IAggressive], 'forbidden'>({
     messages: { forbidden: "ES2016 '{{name}}' method is forbidden." },
   },
   defaultOptions: [{}],
-  create(context) {
-    return definePrototypeMethodHandler(context, {
+  create(context, options) {
+    return definePrototypeMethodHandler(context, options, {
       Array: ['includes'],
       Int8Array: ['includes'],
       Uint8Array: ['includes'],
