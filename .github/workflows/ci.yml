@@ -26,6 +26,8 @@ jobs:
         run: yarn lint
       - name: Type
         run: yarn type
+      - name: Build
+        run: yarn build
 
   test:
     name: Test
