@@ -16,5 +16,5 @@ const n = Math.sign(value);
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.5/src/rules/no-math-sign.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.5/tests/src/rules/no-math-sign.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.6/src/rules/no-math-sign.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.6/tests/src/rules/no-math-sign.ts)

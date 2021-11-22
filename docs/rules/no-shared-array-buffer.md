@@ -16,5 +16,5 @@ let buffer = new SharedArrayBuffer(10);
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.5/src/rules/no-shared-array-buffer.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.5/tests/src/rules/no-shared-array-buffer.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.6/src/rules/no-shared-array-buffer.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v0.0.6/tests/src/rules/no-shared-array-buffer.ts)
