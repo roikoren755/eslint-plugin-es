@@ -1608,7 +1608,7 @@ eslint-module-utils@^2.7.1:
     pkg-dir "^2.0.0"
 
 "eslint-plugin-es-roikoren@file:.":
-  version "0.0.5"
+  version "0.0.6"
   dependencies:
     "@typescript-eslint/experimental-utils" "5.3.1"
     regexpp "3.2.0"
@@ -3959,10 +3959,10 @@ type-check@^0.4.0, type-check@~0.4.0:
   dependencies:
     prelude-ls "^1.2.1"
 
-type-fest@2.5.4:
-  version "2.5.4"
-  resolved "https://registry.npmjs.org/type-fest/-/type-fest-2.5.4.tgz#1613bf29a172ff1c66c29325466af9096fe505b5"
-  integrity sha512-zyPomVvb6u7+gJ/GPYUH6/nLDNiTtVOqXVUHtxFv5PmZQh6skgfeRtFYzWC01T5KeNWNIx5/0P111rKFLlkFvA==
+type-fest@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.6.0.tgz#e9f1e78c5f746ca97ccbb873c59aa16c3bf6b123"
+  integrity sha512-XN1FDGGtaSDA6CFsCW5iolTQqFsnJ+ZF6JqSz0SqXoh4F8GY0xqUv5RYnTilpmL+sOH8OH4FX8tf9YyAPM2LDA==
 
 type-fest@^0.13.1:
   version "0.13.1"
