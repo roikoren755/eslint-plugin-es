@@ -1,6 +1,7 @@
+import type { TSESTree } from '@typescript-eslint/typescript-estree';
+
 import { createRule } from '../util/create-rule';
 import { isCommaToken } from '../util/is-comma-token';
-import type { TSESTree } from '@typescript-eslint/typescript-estree';
 
 export const category = 'ES5';
 export default createRule<[], 'forbidden'>({
