@@ -128,6 +128,7 @@ import noObjectValues from './rules/no-object-values';
 import noOctalNumericLiterals from './rules/no-octal-numeric-literals';
 import noOptionalCatchBinding from './rules/no-optional-catch-binding';
 import noOptionalChaining from './rules/no-optional-chaining';
+import noPrivateIn from './rules/no-private-in';
 import noPromise from './rules/no-promise';
 import noPromiseAllSettled from './rules/no-promise-all-settled';
 import noPromiseAny from './rules/no-promise-any';
@@ -304,6 +305,7 @@ export default {
     'no-octal-numeric-literals': noOctalNumericLiterals,
     'no-optional-catch-binding': noOptionalCatchBinding,
     'no-optional-chaining': noOptionalChaining,
+    'no-private-in': noPrivateIn,
     'no-promise': noPromise,
     'no-promise-all-settled': noPromiseAllSettled,
     'no-promise-any': noPromiseAny,
