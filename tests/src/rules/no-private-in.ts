@@ -7,9 +7,9 @@ import rule from '../../../src/rules/no-private-in';
 const error = (object: string): TSESLint.TestCaseError<'forbidden'> => ({
   messageId: 'forbidden' as const,
   line: 1,
-  column: 1,
-  type: AST_NODE_TYPES.MemberExpression,
-  data: { name: 'x', object },
+  column: 31,
+  type: AST_NODE_TYPES.PrivateIdentifier,
+  data: { object, private: 'x' },
 });
 
 if (!RuleTester.isSupported(2022)) {
@@ -22,9 +22,9 @@ if (!RuleTester.isSupported(2022)) {
       'class A { #x; f(obj) { return foo in obj.#x } }',
     ],
     invalid: [
-      { code: 'class A { #x; f(obj) { return #x in obj } }', errors: [{ ...error('obj'), column: 1 }] },
-      { code: 'class A { #x; f(obj) { return #x in obj.foo } }', errors: [{ ...error('object'), column: 1 }] },
-      { code: 'class A { #x; f(obj) { return #x in obj.#x } }', errors: [{ ...error('object'), column: 1 }] },
+      { code: 'class A { #x; f(obj) { return #x in obj } }', errors: [error('obj')] },
+      { code: 'class A { #x; f(obj) { return #x in obj.foo } }', errors: [error('object')] },
+      { code: 'class A { #x; f(obj) { return #x in obj.#x } }', errors: [error('object')] },
     ],
   });
 }
