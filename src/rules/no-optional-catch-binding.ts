@@ -1,5 +1,6 @@
-import { createRule } from '../util/create-rule';
 import type { TSESTree } from '@typescript-eslint/typescript-estree';
+
+import { createRule } from '../util/create-rule';
 
 export const category = 'ES2019';
 export const typescript = true;
