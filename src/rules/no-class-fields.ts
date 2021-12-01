@@ -1,7 +1,8 @@
-import { createRule } from '../util/create-rule';
-import type { TSESTree } from '@typescript-eslint/typescript-estree';
-import type { TSESLint } from '@typescript-eslint/experimental-utils';
 import { ASTUtils } from '@typescript-eslint/experimental-utils';
+import type { TSESLint } from '@typescript-eslint/experimental-utils';
+import type { TSESTree } from '@typescript-eslint/typescript-estree';
+
+import { createRule } from '../util/create-rule';
 
 /**
  * Get the name and kind of the given PropertyDefinition node.
