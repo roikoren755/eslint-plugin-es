@@ -28,7 +28,7 @@ if (!RuleTester.isSupported(2022)) {
         'function f() { async function f() { await expr } }',
       ],
       invalid: [
-        { code: 'await expr()', errors: [{ ...error }] },
+        { code: 'await expr', errors: [{ ...error }] },
         { code: 'for await (a of b);', errors: [{ ...error, type: AST_NODE_TYPES.ForOfStatement }] },
         { code: 'for await (var a of b);', errors: [{ ...error, type: AST_NODE_TYPES.ForOfStatement }] },
         { code: 'for await (let a of b);', errors: [{ ...error, type: AST_NODE_TYPES.ForOfStatement }] },
