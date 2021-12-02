@@ -1,4 +1,4 @@
-import fs from 'fs';
+import { readdirSync, writeFileSync } from 'fs';
 import path from 'path';
 
 import { TSESLint } from '@typescript-eslint/experimental-utils';
@@ -10,8 +10,7 @@ const run = async (): Promise<void> => {
   const collator = new Intl.Collator('en', { numeric: true });
 
   const configRootPath = path.resolve(__dirname, '../src/configs');
-  const configIds = fs
-    .readdirSync(configRootPath)
+  const configIds = readdirSync(configRootPath)
     .map((f) => path.basename(f, '.ts'))
     .sort(collator.compare.bind(collator));
   const ruleIds = rules.map((r) => r.ruleId).sort(collator.compare.bind(collator));
@@ -20,7 +19,7 @@ const run = async (): Promise<void> => {
   const configs = configIds.map((id) => `'${id}': ${camelcase(id)}`).join(',');
   const rulesField = ruleIds.map((id) => `'${id}': ${camelcase(id)}`).join(',');
 
-  fs.writeFileSync(
+  writeFileSync(
     'src/index.ts',
     `/**
  * DON'T EDIT THIS FILE.
