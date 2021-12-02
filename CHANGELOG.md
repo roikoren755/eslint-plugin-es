@@ -1,5 +1,23 @@
 # eslint-plugin-es-roikoren
 
+## 0.0.7
+
+### Patch Changes
+
+- [#30](https://github.com/roikoren755/eslint-plugin-es/pull/30) [`fc64e5a`](https://github.com/roikoren755/eslint-plugin-es/commit/fc64e5afeded43d767790e15939f3066a22be6f1) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency @changesets/cli to v2.18.1
+
+- [#11](https://github.com/roikoren755/eslint-plugin-es/pull/11) [`ae75c1b`](https://github.com/roikoren755/eslint-plugin-es/commit/ae75c1b43e41658135aa219282f006833757d85a) Thanks [@roikoren755](https://github.com/roikoren755)! - feat: add `es-roikoren/no-private-in` rule
+
+- [`76fd587`](https://github.com/roikoren755/eslint-plugin-es/commit/76fd5877bbe45f983df9c23ccd5d7fae3f9ec7cc) Thanks [@roikoren755](https://github.com/roikoren755)! - core(deps): remove unused dependency, update prettier
+
+- [#12](https://github.com/roikoren755/eslint-plugin-es/pull/12) [`f54eb1a`](https://github.com/roikoren755/eslint-plugin-es/commit/f54eb1a026fe2bbe618efe370c1bd6dae23ecf0c) Thanks [@roikoren755](https://github.com/roikoren755)! - feat: add `es-roikoren/no-top-level-await` rule
+
+- [`c79b382`](https://github.com/roikoren755/eslint-plugin-es/commit/c79b3820057be235993f4b7cd0ad1d32f25d7540) Thanks [@roikoren755](https://github.com/roikoren755)! - chore(deps): remove more unused dev deps
+
+- [#18](https://github.com/roikoren755/eslint-plugin-es/pull/18) [`20f6399`](https://github.com/roikoren755/eslint-plugin-es/commit/20f63998bcf2cdcda5559366d257e10a78067f26) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update typescript-eslint monorepo to v5.5.0
+
+- [`76229bb`](https://github.com/roikoren755/eslint-plugin-es/commit/76229bbb033346cb51a450cf01d84835d9976d4b) Thanks [@roikoren755](https://github.com/roikoren755)! - chore(deps): remove one more unused dev dep
+
 ## 0.0.6
 
 ### Patch Changes
