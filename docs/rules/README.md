@@ -16,6 +16,7 @@ There is a config that enables the rules in this category: `plugin:es-roikoren/n
 | [es-roikoren/no-object-hasown](./no-object-hasown.md) | disallow the `Object.hasOwn` method. |  |
 | [es-roikoren/no-private-in](./no-private-in.md) | disallow `#x in obj`. |  |
 | [es-roikoren/no-regexp-d-flag](./no-regexp-d-flag.md) | disallow RegExp `d` flag. |  |
+| [es-roikoren/no-top-level-await](./no-top-level-await.md) | disallow top-level `await`. |  |
 
 ## ES2021
 

@@ -13,6 +13,7 @@ const config: TSESLint.Linter.Config = {
     'es-roikoren/no-object-hasown': 'error',
     'es-roikoren/no-private-in': 'error',
     'es-roikoren/no-regexp-d-flag': 'error',
+    'es-roikoren/no-top-level-await': 'error',
   },
 };
 
