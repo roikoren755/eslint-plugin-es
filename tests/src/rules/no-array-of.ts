@@ -1,7 +1,7 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-array-of';
+import { RuleTester } from '../../tester';
 
 new RuleTester().run('no-array-of', rule, {
   valid: ['Array', 'Array.from', 'let Array = 0; Array.of'],

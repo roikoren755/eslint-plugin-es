@@ -1,9 +1,10 @@
 import path from 'path';
+
 import type { TSESLint } from '@typescript-eslint/experimental-utils';
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-array-prototype-includes';
+import { RuleTester } from '../../tester';
 
 const ruleId = 'no-array-prototype-includes';
 const error = (className?: string): TSESLint.TestCaseError<'forbidden'> => ({

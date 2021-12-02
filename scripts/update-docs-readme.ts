@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync, writeFileSync } from 'fs';
 import path from 'path';
+
 import type { ICategory, IRule } from './rules';
 import { categories } from './rules';
 

@@ -1,8 +1,8 @@
 import type { TSESLint } from '@typescript-eslint/experimental-utils';
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-regexp-unicode-property-escapes-2019';
+import { RuleTester } from '../../tester';
 
 const error = (options?: { value?: string; notLiteral?: boolean }): TSESLint.TestCaseError<'forbidden'> => {
   const value = options?.value ? `Script=${options.value}` : 'Extended_Pictographic';

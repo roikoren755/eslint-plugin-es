@@ -1,5 +1,6 @@
 import { readdirSync } from 'fs';
 import path from 'path';
+
 import type { TSESLint } from '@typescript-eslint/experimental-utils';
 
 const libRoot = path.resolve(__dirname, '../src/rules');

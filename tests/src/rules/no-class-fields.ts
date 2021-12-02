@@ -1,8 +1,8 @@
 import type { TSESLint } from '@typescript-eslint/experimental-utils';
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-class-fields';
+import { RuleTester } from '../../tester';
 
 const error = (nameWithKind: string, isPublic?: boolean): TSESLint.TestCaseError<'forbidden'> => ({
   messageId: 'forbidden',

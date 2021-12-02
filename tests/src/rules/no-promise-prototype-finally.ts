@@ -1,8 +1,9 @@
 import path from 'path';
+
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-promise-prototype-finally';
+import { RuleTester } from '../../tester';
 
 const ruleId = 'no-promise-prototype-finally';
 const error = {

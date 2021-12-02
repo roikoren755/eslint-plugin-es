@@ -1,7 +1,7 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-accessor-properties';
+import { RuleTester } from '../../tester';
 
 new RuleTester().run('no-accessor-properties', rule, {
   valid: ['({ get: function() {} })', '({ set: function() {} })', '({ get() {} })', '({ set(value) {} })'],

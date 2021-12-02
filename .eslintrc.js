@@ -196,7 +196,10 @@ module.exports = {
     'import/no-extraneous-dependencies': ERROR,
     'import/no-unresolved': WARN,
     'import/no-useless-path-segments': ERROR,
-    'import/order': [ERROR, { groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'] }],
+    'import/order': [
+      ERROR,
+      { alphabetize: { order: 'asc' }, 'newlines-between': 'always', warnOnUnassignedImports: true },
+    ],
 
     'unicorn/better-regex': WARN,
     'unicorn/catch-error-name': OFF,

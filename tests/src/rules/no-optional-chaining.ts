@@ -1,7 +1,7 @@
 // import { AST_TOKEN_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-optional-chaining';
+import { RuleTester } from '../../tester';
 
 const error = {
   messageId: 'forbidden' as const,

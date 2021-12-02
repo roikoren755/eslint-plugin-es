@@ -1,5 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/experimental-utils';
 import type { TSESTree } from '@typescript-eslint/typescript-estree';
+
 import { createRule } from '../util/create-rule';
 
 /**

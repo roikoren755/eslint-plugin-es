@@ -1,8 +1,9 @@
 import path from 'path';
+
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-regexp-prototype-flags';
+import { RuleTester } from '../../tester';
 
 const ruleId = 'no-regexp-prototype-flags';
 const error = {

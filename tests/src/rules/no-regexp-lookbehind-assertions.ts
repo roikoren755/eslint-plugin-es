@@ -1,7 +1,7 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-regexp-lookbehind-assertions';
+import { RuleTester } from '../../tester';
 
 const baseError = { messageId: 'forbidden' as const, line: 1, column: 1, data: {} };
 const literalError = { ...baseError, type: AST_NODE_TYPES.Literal };

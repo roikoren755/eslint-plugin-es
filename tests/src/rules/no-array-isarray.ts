@@ -1,7 +1,7 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-array-isarray';
+import { RuleTester } from '../../tester';
 
 new RuleTester().run('no-array-isarray', rule, {
   valid: ['Array', 'Array.from', 'let Array = 0; Array.isArray'],

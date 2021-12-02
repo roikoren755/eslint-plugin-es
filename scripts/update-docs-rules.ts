@@ -1,8 +1,10 @@
 import { readFileSync, readdirSync, writeFileSync } from 'fs';
 import path from 'path';
+
 import { TSESLint } from '@typescript-eslint/experimental-utils';
 
 import { version } from '../package.json';
+
 import { rules } from './rules';
 import { formatList } from './update-docs-readme';
 

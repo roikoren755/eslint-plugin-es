@@ -1,8 +1,9 @@
 import path from 'path';
+
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-symbol-prototype-description';
+import { RuleTester } from '../../tester';
 
 const ruleId = 'no-symbol-prototype-description';
 const error = {

@@ -2,7 +2,6 @@
  * DON'T EDIT THIS FILE.
  * This file was generated automatically by 'scripts/update-src-index.ts'.
  */
-import noNewInEs5 from './configs/no-new-in-es5';
 import noNewInEs2015 from './configs/no-new-in-es2015';
 import noNewInEs2016 from './configs/no-new-in-es2016';
 import noNewInEs2017 from './configs/no-new-in-es2017';
@@ -10,15 +9,16 @@ import noNewInEs2018 from './configs/no-new-in-es2018';
 import noNewInEs2019 from './configs/no-new-in-es2019';
 import noNewInEs2020 from './configs/no-new-in-es2020';
 import noNewInEs2021 from './configs/no-new-in-es2021';
+import noNewInEs5 from './configs/no-new-in-es5';
 import noNewInEsnext from './configs/no-new-in-esnext';
-import restrictToEs3 from './configs/restrict-to-es3';
-import restrictToEs5 from './configs/restrict-to-es5';
 import restrictToEs2015 from './configs/restrict-to-es2015';
 import restrictToEs2016 from './configs/restrict-to-es2016';
 import restrictToEs2017 from './configs/restrict-to-es2017';
 import restrictToEs2018 from './configs/restrict-to-es2018';
 import restrictToEs2019 from './configs/restrict-to-es2019';
 import restrictToEs2020 from './configs/restrict-to-es2020';
+import restrictToEs3 from './configs/restrict-to-es3';
+import restrictToEs5 from './configs/restrict-to-es5';
 import typescript from './configs/typescript';
 import noAccessorProperties from './rules/no-accessor-properties';
 import noArrayFrom from './rules/no-array-from';
@@ -82,9 +82,9 @@ import noMathExpm1 from './rules/no-math-expm1';
 import noMathFround from './rules/no-math-fround';
 import noMathHypot from './rules/no-math-hypot';
 import noMathImul from './rules/no-math-imul';
+import noMathLog10 from './rules/no-math-log10';
 import noMathLog1P from './rules/no-math-log1p';
 import noMathLog2 from './rules/no-math-log2';
-import noMathLog10 from './rules/no-math-log10';
 import noMathSign from './rules/no-math-sign';
 import noMathSinh from './rules/no-math-sinh';
 import noMathTanh from './rules/no-math-tanh';

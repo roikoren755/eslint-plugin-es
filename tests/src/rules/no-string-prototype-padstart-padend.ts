@@ -1,9 +1,10 @@
 import path from 'path';
+
 import type { TSESLint } from '@typescript-eslint/experimental-utils';
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-string-prototype-padstart-padend';
+import { RuleTester } from '../../tester';
 
 const ruleId = 'no-string-prototype-padstart-padend';
 const error = (loc?: 'End'): TSESLint.TestCaseError<'forbidden'> => ({

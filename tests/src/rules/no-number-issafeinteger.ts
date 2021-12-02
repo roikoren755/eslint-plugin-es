@@ -1,7 +1,7 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-number-issafeinteger';
+import { RuleTester } from '../../tester';
 
 const error = {
   messageId: 'forbidden' as const,

@@ -1,7 +1,7 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-math-log2';
+import { RuleTester } from '../../tester';
 
 const error = {
   messageId: 'forbidden' as const,

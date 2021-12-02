@@ -1,8 +1,9 @@
 import path from 'path';
+
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-string-prototype-replaceall';
+import { RuleTester } from '../../tester';
 
 const ruleId = 'no-string-prototype-replaceall';
 const error = {

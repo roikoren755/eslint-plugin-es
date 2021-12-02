@@ -1,7 +1,7 @@
 import { AST_TOKEN_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-nullish-coalescing-operators';
+import { RuleTester } from '../../tester';
 
 const type = AST_TOKEN_TYPES.Punctuator;
 

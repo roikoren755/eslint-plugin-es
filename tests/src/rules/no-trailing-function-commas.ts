@@ -1,5 +1,5 @@
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-trailing-function-commas';
+import { RuleTester } from '../../tester';
 
 const error = { messageId: 'forbidden' as const, line: 1, data: {} };
 

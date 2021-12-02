@@ -1,7 +1,7 @@
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-template-literals';
+import { RuleTester } from '../../tester';
 
 const baseError = { messageId: 'forbidden' as const, line: 1, data: {} };
 const templateLiteralError = { ...baseError, type: AST_NODE_TYPES.TemplateLiteral };

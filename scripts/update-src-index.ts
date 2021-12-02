@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+
 import { TSESLint } from '@typescript-eslint/experimental-utils';
 import camelcase from 'camelcase';
 

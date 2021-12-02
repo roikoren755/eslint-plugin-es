@@ -1,8 +1,9 @@
 import path from 'path';
+
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
 
-import { RuleTester } from '../../tester';
 import rule from '../../../src/rules/no-array-prototype-map';
+import { RuleTester } from '../../tester';
 
 const ruleId = 'no-array-prototype-map';
 const error = {
