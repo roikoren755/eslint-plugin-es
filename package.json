@@ -35,7 +35,7 @@
     "update:doc": "ts-node scripts/update-docs-readme",
     "update:index": "ts-node scripts/update-src-index",
     "update:ruledocs": "ts-node scripts/update-docs-rules",
-    "watch": "mocha tests/**/*.js --reporter progress --watch --growl"
+    "watch": "mocha tests/**/*.ts --reporter progress --watch"
   },
   "resolutions": {
     "prettier": "2.5.0"
