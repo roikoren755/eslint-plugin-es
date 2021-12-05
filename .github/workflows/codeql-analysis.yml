@@ -10,7 +10,7 @@ on:
 
 
 concurrency:
-  group: codeql-{{ github.ref }}-1
+  group: codeql-${{ github.ref }}-1
   cancel-in-progress: true
 
 jobs:
