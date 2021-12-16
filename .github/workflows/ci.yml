@@ -59,7 +59,7 @@ jobs:
           node-version: ${{ matrix.node }}
           cache: npm
       - name: Install Packages
-        run: npm ci
+        run: npm i
       - name: Install ESLint ${{ matrix.eslint }}
         run: npm i eslint@${{ matrix.eslint }} -D
       - name: Test
