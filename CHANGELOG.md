@@ -1,5 +1,11 @@
 # eslint-plugin-es-roikoren
 
+## 2.0.0
+
+### Major Changes
+
+- [`2eef8da`](https://github.com/roikoren755/eslint-plugin-es/commit/2eef8da2b409bbc8a377abf5ae45be7105c15e9f) Thanks [@roikoren755](https://github.com/roikoren755)! - feat: drop support for eslint <7
+
 ## 1.0.1
 
 ### Patch Changes
