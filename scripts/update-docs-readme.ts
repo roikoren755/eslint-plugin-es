@@ -196,3 +196,13 @@ ${presetsTableContent}
 <!-- PRESETS_TABLE_END -->`,
   ),
 );
+// Write README.md
+writeFileSync(
+  'README.md',
+  readFileSync('README.md', 'utf-8').replace(
+    /<!--\s*PRESETS_TABLE_START\s*-->[\s\S]*?<!--\s*PRESETS_TABLE_END\s*-->/u,
+    `<!-- PRESETS_TABLE_START -->
+${presetsTableContent}
+<!-- PRESETS_TABLE_END -->`,
+  ),
+);

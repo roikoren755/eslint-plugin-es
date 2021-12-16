@@ -28,7 +28,7 @@ const run = async (): Promise<void> => {
 ${configImports}
 ${ruleImports}
 
-export default {
+export = {
   configs: {
     ${configs},
   },

@@ -11,7 +11,7 @@
     "node_modules"
   ],
   "license": "MIT",
-  "main": "./src/index.js",
+  "main": "src/index.js",
   "files": [
     "src/**/*.js",
     "src/**/*.d.ts",
@@ -21,16 +21,15 @@
     "build": "tsc --project tsconfig.prod.json",
     "clean": "tsc --build --clean && rimraf .nyc_output coverage",
     "coverage": "nyc report -r lcov",
-    "deduplicate": "yarn-deduplicate -s fewer",
     "lint": "eslint . --cache",
     "new": "ts-node scripts/new-rule",
-    "postrelease": "yarn clean",
+    "postrelease": "npm run clean",
     "prepare": "husky install",
-    "prerelease": "yarn build",
+    "prerelease": "npm run build",
     "release": "changeset publish",
     "test": "nyc mocha tests/**/*.ts --reporter dot",
     "type": "tsc",
-    "update": "yarn update:configs && yarn update:index && yarn update:doc && yarn update:ruledocs",
+    "update": "npm run update:configs && npm run update:index && npm run update:doc && npm run update:ruledocs",
     "update:configs": "ts-node scripts/update-src-configs",
     "update:doc": "ts-node scripts/update-docs-readme",
     "update:index": "ts-node scripts/update-src-index",
@@ -59,7 +58,7 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-import-resolver-typescript": "2.5.0",
     "eslint-plugin-es-roikoren": "file:.",
-    "eslint-plugin-eslint-plugin": "4.0.3",
+    "eslint-plugin-eslint-plugin": "4.1.0",
     "eslint-plugin-import": "2.25.3",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-unicorn": "39.0.0",
@@ -70,8 +69,7 @@
     "nyc": "15.1.0",
     "prettier": "2.5.1",
     "semver": "7.3.5",
-    "typescript": "4.5.4",
-    "yarn-deduplicate": "3.1.0"
+    "typescript": "4.5.4"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [

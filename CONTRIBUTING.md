@@ -126,7 +126,7 @@ project:
    or your code is unlikely be merged into the main project. Use Git's
    [interactive rebase](https://help.github.com/articles/interactive-rebase)
    feature to tidy up your commits before making them public.
-    * Make sure that running `yarn lint` and `yarn type` both do not show any errors.
+    * Make sure that running `npm run lint` and `npm run type` both do not show any errors.
     
 
 5. Locally merge (or rebase) the upstream development branch into your topic branch:

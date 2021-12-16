@@ -176,7 +176,7 @@ import noWeakMap from './rules/no-weak-map';
 import noWeakSet from './rules/no-weak-set';
 import noWeakrefs from './rules/no-weakrefs';
 
-export default {
+export = {
   configs: {
     'no-new-in-es5': noNewInEs5,
     'no-new-in-es2015': noNewInEs2015,

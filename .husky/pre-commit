@@ -1,8 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn lint-staged
-yarn deduplicate --list --fail
+npx lint-staged
 
-yarn update
+npm run update
 git add docs/ src/configs/ src/index.ts
