@@ -57,7 +57,7 @@ If you installed `eslint` globally, you should install this plugin in the same w
 
 **Requirements**
 - Node.js `12.22.0` or newer.
-- ESLint `5.16.0` or newer.
+- ESLint `7.0.0` or newer.
 
 ## 📖 Usage
 
