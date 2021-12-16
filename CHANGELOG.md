@@ -1,5 +1,11 @@
 # eslint-plugin-es-roikoren
 
+## 1.0.1
+
+### Patch Changes
+
+- [`735e030`](https://github.com/roikoren755/eslint-plugin-es/commit/735e03038ad1dea190e626e0cb57a22ea2f290e3) Thanks [@roikoren755](https://github.com/roikoren755)! - chore: don't bundle docs with package
+
 ## 1.0.0
 
 ### Major Changes
