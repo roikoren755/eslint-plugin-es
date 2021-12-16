@@ -2,6 +2,8 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npx lint-staged
+npm dedupe
+git add package-lock.json
 
 npm run update
 git add docs/ src/configs/ src/index.ts
