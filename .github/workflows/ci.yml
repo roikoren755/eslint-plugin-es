@@ -60,6 +60,9 @@ jobs:
           cache: npm
       - name: Install Packages
         run: npm i
+      - name: Install NPM v8
+        if: matrix.node != 16
+        run: npm i -g npm
       - name: Install ESLint ${{ matrix.eslint }}
         run: npm i eslint@${{ matrix.eslint }} -D
       - name: Test
