@@ -2,5 +2,6 @@
   "extends": ["config:base", ":preserveSemverRanges"],
   "semanticCommits": "enabled",
   "dependencyDashboard": true,
-  "postUpdateOptions": ["npmDedupe"]
+  "postUpdateOptions": ["npmDedupe"],
+  "reviewers": ["roikoren755"]
 }
