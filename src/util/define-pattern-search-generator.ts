@@ -1,4 +1,4 @@
-import { ASTUtils } from '@typescript-eslint/experimental-utils';
+import { ASTUtils } from '@typescript-eslint/utils';
 
 /**
  * Define generator to search pattern.

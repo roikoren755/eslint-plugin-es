@@ -1,5 +1,5 @@
-import type { TSESLint } from '@typescript-eslint/experimental-utils';
 import { AST_NODE_TYPES } from '@typescript-eslint/types';
+import type { TSESLint } from '@typescript-eslint/utils';
 
 import rule from '../../../src/rules/no-weakrefs';
 import { RuleTester } from '../../tester';

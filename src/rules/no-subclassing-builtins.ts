@@ -1,4 +1,4 @@
-import { ASTUtils } from '@typescript-eslint/experimental-utils';
+import { ASTUtils } from '@typescript-eslint/utils';
 
 import { createRule } from '../util/create-rule';
 

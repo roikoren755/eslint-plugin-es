@@ -1,6 +1,6 @@
-import { ASTUtils } from '@typescript-eslint/experimental-utils';
-import type { TSESLint } from '@typescript-eslint/experimental-utils';
 import type { TSESTree } from '@typescript-eslint/typescript-estree';
+import { ASTUtils } from '@typescript-eslint/utils';
+import type { TSESLint } from '@typescript-eslint/utils';
 
 /**
  * Iterate the calls of the `RegExp` global variable.

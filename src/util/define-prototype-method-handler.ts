@@ -1,7 +1,7 @@
 /* eslint-disable max-lines */
-import { ASTUtils } from '@typescript-eslint/experimental-utils';
-import type { JSONSchema, TSESLint, TSESTree } from '@typescript-eslint/experimental-utils';
 import type { ParserServices } from '@typescript-eslint/typescript-estree';
+import { ASTUtils } from '@typescript-eslint/utils';
+import type { JSONSchema, TSESLint, TSESTree } from '@typescript-eslint/utils';
 import type * as TypeScript from 'typescript';
 
 import { optionalRequire } from './optional-require';
