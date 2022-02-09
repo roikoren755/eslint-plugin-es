@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs';
 import path from 'path';
 
-import { TSESLint } from '@typescript-eslint/experimental-utils';
+import { TSESLint } from '@typescript-eslint/utils';
 
 const run = async (appliedRuleId: string): Promise<void> => {
   if (!appliedRuleId) {

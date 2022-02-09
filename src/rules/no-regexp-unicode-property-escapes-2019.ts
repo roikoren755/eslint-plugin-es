@@ -1,5 +1,5 @@
-import type { TSESLint } from '@typescript-eslint/experimental-utils';
 import type { TSESTree } from '@typescript-eslint/typescript-estree';
+import type { TSESLint } from '@typescript-eslint/utils';
 import { RegExpValidator } from 'regexpp';
 
 import { createRule } from '../util/create-rule';
