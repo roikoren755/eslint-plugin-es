@@ -189,7 +189,7 @@ ${configs
 // Write README.md
 writeFileSync(
   'docs/README.md',
-  readFileSync('docs/README.md', 'utf-8').replace(
+  readFileSync('docs/README.md', 'utf8').replace(
     /<!--\s*PRESETS_TABLE_START\s*-->[\s\S]*?<!--\s*PRESETS_TABLE_END\s*-->/u,
     `<!-- PRESETS_TABLE_START -->
 ${presetsTableContent}
@@ -199,7 +199,7 @@ ${presetsTableContent}
 // Write README.md
 writeFileSync(
   'README.md',
-  readFileSync('README.md', 'utf-8').replace(
+  readFileSync('README.md', 'utf8').replace(
     /<!--\s*PRESETS_TABLE_START\s*-->[\s\S]*?<!--\s*PRESETS_TABLE_END\s*-->/u,
     `<!-- PRESETS_TABLE_START -->
 ${presetsTableContent}
