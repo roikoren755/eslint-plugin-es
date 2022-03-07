@@ -4,7 +4,7 @@ import type { TSESLint } from '@typescript-eslint/utils';
 import rule from '../../../src/rules/no-typed-arrays';
 import { RuleTester } from '../../tester';
 
-const error = (name: string | 'DataView'): TSESLint.TestCaseError<'forbidden'> => ({
+const error = (name: string): TSESLint.TestCaseError<'forbidden'> => ({
   messageId: 'forbidden',
   line: 1,
   type: AST_NODE_TYPES.Identifier,
