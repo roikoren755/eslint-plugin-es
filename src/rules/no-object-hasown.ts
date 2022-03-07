@@ -14,6 +14,6 @@ export default createRule<[], 'forbidden'>({
   },
   defaultOptions: [],
   create(context) {
-    return referenceTracker(context, { Object: { hasOwn: { [ASTUtils.ReferenceTracker.READ]: true } } });
+    return referenceTracker(context, { Object: { hasOwn: { [ASTUtils.ReferenceTracker.READ]: true as const } } });
   },
 });
