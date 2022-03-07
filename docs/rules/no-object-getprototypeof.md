@@ -16,5 +16,5 @@ var proto = Object.getPrototypeOf(obj);
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.1/src/rules/no-object-getprototypeof.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.1/tests/src/rules/no-object-getprototypeof.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.2/src/rules/no-object-getprototypeof.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.2/tests/src/rules/no-object-getprototypeof.ts)
