@@ -16,5 +16,5 @@ const n = Math.fround(value);
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.2/src/rules/no-math-fround.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.2/tests/src/rules/no-math-fround.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.3/src/rules/no-math-fround.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.3/tests/src/rules/no-math-fround.ts)

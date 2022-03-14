@@ -33,5 +33,5 @@ This is prior to the `settings.es.aggressive` setting.
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.2/src/rules/no-regexp-prototype-flags.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.2/tests/src/rules/no-regexp-prototype-flags.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.3/src/rules/no-regexp-prototype-flags.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.3/tests/src/rules/no-regexp-prototype-flags.ts)
