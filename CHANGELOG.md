@@ -1,5 +1,13 @@
 # eslint-plugin-es-roikoren
 
+## 2.0.3
+
+### Patch Changes
+
+- [#89](https://github.com/roikoren755/eslint-plugin-es/pull/89) [`dad57fb`](https://github.com/roikoren755/eslint-plugin-es/commit/dad57fb12e75633c5a38f497244827c22514236e) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency mocha to v9.2.2
+
+* [#90](https://github.com/roikoren755/eslint-plugin-es/pull/90) [`23ed7ea`](https://github.com/roikoren755/eslint-plugin-es/commit/23ed7ea47d27b21df8f60f425cd8d3d5be5dfd41) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency eslint to v8.11.0
+
 ## 2.0.2
 
 ### Patch Changes

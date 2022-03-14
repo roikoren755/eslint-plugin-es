@@ -16,5 +16,5 @@ const r1 = /\p{Script=Hiragana}+/u;
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.2/src/rules/no-regexp-unicode-property-escapes.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.2/tests/src/rules/no-regexp-unicode-property-escapes.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.3/src/rules/no-regexp-unicode-property-escapes.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.3/tests/src/rules/no-regexp-unicode-property-escapes.ts)
