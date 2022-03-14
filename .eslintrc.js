@@ -236,6 +236,10 @@ module.exports = {
   },
   overrides: [
     { files: ['./.commitlintrc.js', './.eslintrc.js', './.prettierrc.js'], rules: { 'no-undef': OFF } },
+    {
+      files: ['./.eslintrc.js', './src/index.ts', './src/configs/*.ts'],
+      rules: { '@typescript-eslint/naming-convention': OFF },
+    },
     { files: ['./src/index.ts', './src/configs/*.ts', './src/rules/*.ts'], rules: { 'import/no-default-export': OFF } },
     { files: ['./scripts/*.ts', './tests/**/*.ts'], rules: { 'no-console': OFF } },
     { files: ['./src/index.ts'], rules: { 'max-lines': OFF } },
