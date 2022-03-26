@@ -1,5 +1,31 @@
 # eslint-plugin-es-roikoren
 
+## 2.0.4
+
+### Patch Changes
+
+- [#93](https://github.com/roikoren755/eslint-plugin-es/pull/93) [`87d4111`](https://github.com/roikoren755/eslint-plugin-es/commit/87d4111c49e3c58f352f42847297140f0b95aac7) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency globals to v13.13.0
+
+* [#101](https://github.com/roikoren755/eslint-plugin-es/pull/101) [`75f60ca`](https://github.com/roikoren755/eslint-plugin-es/commit/75f60cab948a72e411f7ecba539c82d2205e7714) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typescript to v4.6.3
+
+- [#94](https://github.com/roikoren755/eslint-plugin-es/pull/94) [`dc11938`](https://github.com/roikoren755/eslint-plugin-es/commit/dc1193829dba60ece9790f5a67c0f495349c78ce) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency @commitlint/cli to v16.2.3
+
+* [#92](https://github.com/roikoren755/eslint-plugin-es/pull/92) [`6d08fba`](https://github.com/roikoren755/eslint-plugin-es/commit/6d08fbace583ea6367951c96fee84a1501610da6) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update typescript-eslint monorepo to v5.15.0
+
+- [#96](https://github.com/roikoren755/eslint-plugin-es/pull/96) [`1f8024d`](https://github.com/roikoren755/eslint-plugin-es/commit/1f8024dd8c8695d6e6ec86a563d4ab5977930f8d) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency lint-staged to v12.3.7
+
+* [#102](https://github.com/roikoren755/eslint-plugin-es/pull/102) [`8f09eaf`](https://github.com/roikoren755/eslint-plugin-es/commit/8f09eaf201b4afad2f7b7589456342b1bb07d61e) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency prettier to v2.6.1
+
+- [#97](https://github.com/roikoren755/eslint-plugin-es/pull/97) [`10fcfd5`](https://github.com/roikoren755/eslint-plugin-es/commit/10fcfd5fb0e7d38f3c92d8410dd8976855da3bac) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency eslint-plugin-unicorn to v41.0.1
+
+* [#100](https://github.com/roikoren755/eslint-plugin-es/pull/100) [`4635b27`](https://github.com/roikoren755/eslint-plugin-es/commit/4635b2799bb8a3fc834d9afaf5ca86965aa6f3af) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency eslint-import-resolver-typescript to v2.7.0
+
+- [#95](https://github.com/roikoren755/eslint-plugin-es/pull/95) [`c32ff95`](https://github.com/roikoren755/eslint-plugin-es/commit/c32ff95b5427d29688e22a3652dad774ce92c1d8) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency prettier to v2.6.0
+
+* [#104](https://github.com/roikoren755/eslint-plugin-es/pull/104) [`5279e03`](https://github.com/roikoren755/eslint-plugin-es/commit/5279e032a1447c6d3ff6ffae6a2fffa1c95d7c24) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency eslint to v8.12.0
+
+- [#99](https://github.com/roikoren755/eslint-plugin-es/pull/99) [`a2fb5b5`](https://github.com/roikoren755/eslint-plugin-es/commit/a2fb5b5d652bf64b4c752e7a3732c12c80909cc3) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update typescript-eslint monorepo to v5.16.0
+
 ## 2.0.3
 
 ### Patch Changes
