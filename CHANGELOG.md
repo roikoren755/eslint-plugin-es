@@ -1,5 +1,15 @@
 # eslint-plugin-es-roikoren
 
+## 2.0.5
+
+### Patch Changes
+
+- [#108](https://github.com/roikoren755/eslint-plugin-es/pull/108) [`a1e2b09`](https://github.com/roikoren755/eslint-plugin-es/commit/a1e2b091261fb0a4bb4f504ca5e68e0b82707b2f) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update typescript-eslint monorepo to v5.17.0
+
+* [#106](https://github.com/roikoren755/eslint-plugin-es/pull/106) [`129f372`](https://github.com/roikoren755/eslint-plugin-es/commit/129f3725f68468e2a144550737e7da21590a5970) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency @changesets/cli to v2.22.0
+
+- [#105](https://github.com/roikoren755/eslint-plugin-es/pull/105) [`621cd46`](https://github.com/roikoren755/eslint-plugin-es/commit/621cd46cef29e6e5841c71934df436082aa798a2) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency @changesets/changelog-github to v0.4.4
+
 ## 2.0.4
 
 ### Patch Changes
