@@ -1,5 +1,13 @@
 # eslint-plugin-es-roikoren
 
+## 2.0.6
+
+### Patch Changes
+
+- [#109](https://github.com/roikoren755/eslint-plugin-es/pull/109) [`86e7e87`](https://github.com/roikoren755/eslint-plugin-es/commit/86e7e8783839d16daac2c29de9ac1dc329128368) Thanks [@roikoren755](https://github.com/roikoren755)! - ci: add codechecks and typecov
+
+* [#111](https://github.com/roikoren755/eslint-plugin-es/pull/111) [`8d89d8e`](https://github.com/roikoren755/eslint-plugin-es/commit/8d89d8e2c48d7f19dc561ba7713d5faf84ef5f0e) Thanks [@roikoren755](https://github.com/roikoren755)! - fix(ci): set correct base branch
+
 ## 2.0.5
 
 ### Patch Changes
