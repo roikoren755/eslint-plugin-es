@@ -29,6 +29,10 @@ jobs:
         run: npm run lint
       - name: Type
         run: npm run type
+      - name: Codechecks
+        run: npm run codechecks
+        env:
+          CC_SECRET: ${{ secrets.CC_SECRET }}
       - name: Build
         run: npm run build
 

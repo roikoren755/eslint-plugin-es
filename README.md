@@ -2,6 +2,7 @@
 
 [![Test Status](https://github.com/roikoren755/eslint-plugin-es/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/roikoren755/eslint-plugin-es/actions/workflows/ci.yml?query=branch%3Amain)
 [![codecov](https://codecov.io/gh/roikoren755/eslint-plugin-es/branch/main/graph/badge.svg?token=RF5L5KQQN6)](https://codecov.io/gh/roikoren755/eslint-plugin-es)
+[![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Froikoren755%2Feslint-plugin-es%2Fmain%2Fpackage.json)](https://github.com/roikoren755/eslint-plugin-es)
 
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=roikoren755_eslint-plugin-es&metric=bugs)](https://sonarcloud.io/dashboard?id=roikoren755_eslint-plugin-es)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=roikoren755_eslint-plugin-es&metric=code_smells)](https://sonarcloud.io/dashboard?id=roikoren755_eslint-plugin-es)
