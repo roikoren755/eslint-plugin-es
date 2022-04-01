@@ -1,5 +1,13 @@
 # eslint-plugin-es-roikoren
 
+## 2.0.7
+
+### Patch Changes
+
+- [#114](https://github.com/roikoren755/eslint-plugin-es/pull/114) [`3610c39`](https://github.com/roikoren755/eslint-plugin-es/commit/3610c39d44e3f0823d2832f66e86c7864cb876e8) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency eslint-plugin-unicorn to v42
+
+* [#112](https://github.com/roikoren755/eslint-plugin-es/pull/112) [`372e865`](https://github.com/roikoren755/eslint-plugin-es/commit/372e865ebfa8f37a9052be76792083c89f695281) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update actions/setup-node action to v3.1.0
+
 ## 2.0.6
 
 ### Patch Changes
