@@ -1,5 +1,17 @@
 # eslint-plugin-es-roikoren
 
+## 2.0.8
+
+### Patch Changes
+
+- [#119](https://github.com/roikoren755/eslint-plugin-es/pull/119) [`7fec77e`](https://github.com/roikoren755/eslint-plugin-es/commit/7fec77ec22c73b76a0a7211b8da0076530861883) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update codecov/codecov-action action to v3
+
+* [#118](https://github.com/roikoren755/eslint-plugin-es/pull/118) [`c3b19c7`](https://github.com/roikoren755/eslint-plugin-es/commit/c3b19c7363211cb2e32d7767962c5244e26e2f3d) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update typescript-eslint monorepo to v5.18.0
+
+- [#117](https://github.com/roikoren755/eslint-plugin-es/pull/117) [`b39fe85`](https://github.com/roikoren755/eslint-plugin-es/commit/b39fe85028d0d556659ef7a8f5fa58cc092f1ed5) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency eslint-import-resolver-typescript to v2.7.1
+
+* [#115](https://github.com/roikoren755/eslint-plugin-es/pull/115) [`0804a8b`](https://github.com/roikoren755/eslint-plugin-es/commit/0804a8b834d0865a40842da7a6214740a6f5a3f3) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency prettier to v2.6.2
+
 ## 2.0.7
 
 ### Patch Changes
