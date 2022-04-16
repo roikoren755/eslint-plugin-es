@@ -16,5 +16,5 @@ const b = Number.EPSILON;
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.8/src/rules/no-number-epsilon.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.8/tests/src/rules/no-number-epsilon.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.9/src/rules/no-number-epsilon.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.9/tests/src/rules/no-number-epsilon.ts)
