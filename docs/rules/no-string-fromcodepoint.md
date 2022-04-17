@@ -16,5 +16,5 @@ const thumbUp = String.fromCodePoint(0x1F44D);
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.8/src/rules/no-string-fromcodepoint.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.8/tests/src/rules/no-string-fromcodepoint.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.9/src/rules/no-string-fromcodepoint.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.9/tests/src/rules/no-string-fromcodepoint.ts)

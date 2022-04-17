@@ -1,5 +1,25 @@
 # eslint-plugin-es-roikoren
 
+## 2.0.9
+
+### Patch Changes
+
+- [#124](https://github.com/roikoren755/eslint-plugin-es/pull/124) [`f900364`](https://github.com/roikoren755/eslint-plugin-es/commit/f900364364be4aac865a02c8132d6161e9f223af) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update actions/setup-node action to v3.1.1
+
+* [#127](https://github.com/roikoren755/eslint-plugin-es/pull/127) [`c352391`](https://github.com/roikoren755/eslint-plugin-es/commit/c35239193283a9184ad3e18ff436ae27a2b6b3d5) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update actions/checkout action to v3.0.1
+
+- [#126](https://github.com/roikoren755/eslint-plugin-es/pull/126) [`5289312`](https://github.com/roikoren755/eslint-plugin-es/commit/52893125f9f7430499004a8dbf3a67d40b66f1ae) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency semver to v7.3.7
+
+* [#121](https://github.com/roikoren755/eslint-plugin-es/pull/121) [`a8f41b9`](https://github.com/roikoren755/eslint-plugin-es/commit/a8f41b93459fe98a68fddc316dbc6455371b022e) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency semver to v7.3.6
+
+- [#128](https://github.com/roikoren755/eslint-plugin-es/pull/128) [`f51343c`](https://github.com/roikoren755/eslint-plugin-es/commit/f51343c78cad2bb523020f4756e46461de1fb519) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency lint-staged to v12.3.8
+
+* [#123](https://github.com/roikoren755/eslint-plugin-es/pull/123) [`6f4cb86`](https://github.com/roikoren755/eslint-plugin-es/commit/6f4cb86aba82f6a546a65343510aa80e8f4b6308) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency eslint to v8.13.0
+
+- [#125](https://github.com/roikoren755/eslint-plugin-es/pull/125) [`8108a6b`](https://github.com/roikoren755/eslint-plugin-es/commit/8108a6b7c0dd38bf98570ff915ac2f476894ff5a) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update typescript-eslint monorepo to v5.19.0
+
+* [#120](https://github.com/roikoren755/eslint-plugin-es/pull/120) [`ad90e2d`](https://github.com/roikoren755/eslint-plugin-es/commit/ad90e2df7bb631eedc4f7a4f680b3cf49c9e7e3e) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency eslint-plugin-import to v2.26.0
+
 ## 2.0.8
 
 ### Patch Changes
