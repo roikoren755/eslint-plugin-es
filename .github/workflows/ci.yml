@@ -21,7 +21,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3.1.1
         with:
-          node-version: 16
+          node-version: 18
           cache: npm
       - name: Install Packages
         run: npm ci
@@ -42,15 +42,15 @@ jobs:
     strategy:
       matrix:
         eslint: [7, 8]
-        node: [12, 14, 16]
+        node: [12, 14, 16, 18]
         os: [ubuntu-latest]
         include:
           # On other platforms
           - eslint: 8
-            node: 16
+            node: 18
             os: windows-latest
           - eslint: 8
-            node: 16
+            node: 18
             os: macos-latest
 
     runs-on: ${{ matrix.os }}
