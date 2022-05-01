@@ -38,6 +38,7 @@ module.exports = {
     'no-caller': ERROR,
     'no-case-declarations': OFF,
     'no-console': WARN,
+    'no-constant-binary-expression': ERROR,
     'no-constructor-return': ERROR,
     'no-else-return': ERROR,
     'no-eval': ERROR,
