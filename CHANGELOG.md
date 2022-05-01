@@ -1,5 +1,33 @@
 # eslint-plugin-es-roikoren
 
+## 2.0.10
+
+### Patch Changes
+
+- [#138](https://github.com/roikoren755/eslint-plugin-es/pull/138) [`d521e26`](https://github.com/roikoren755/eslint-plugin-es/commit/d521e26883808ea7bd4afe36d395418e373afa4e) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update commitlint monorepo to v16.2.4
+
+* [#133](https://github.com/roikoren755/eslint-plugin-es/pull/133) [`9f0cdab`](https://github.com/roikoren755/eslint-plugin-es/commit/9f0cdab869ddb299225d044e18bc37fca5d7306e) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update codecov/codecov-action action to v3.1.0
+
+- [#140](https://github.com/roikoren755/eslint-plugin-es/pull/140) [`89a9dd4`](https://github.com/roikoren755/eslint-plugin-es/commit/89a9dd4c240d552f7a7dd8411e85c47307ab93d9) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency mocha to v10
+
+* [#132](https://github.com/roikoren755/eslint-plugin-es/pull/132) [`8bbe29f`](https://github.com/roikoren755/eslint-plugin-es/commit/8bbe29fbd69a3ee84b1dff823a049f85d749b63d) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update actions/checkout action to v3.0.2
+
+- [#139](https://github.com/roikoren755/eslint-plugin-es/pull/139) [`47da2ad`](https://github.com/roikoren755/eslint-plugin-es/commit/47da2ad656b0f2f72731bfd3ecdaa9631036b045) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typescript to v4.6.4
+
+* [#136](https://github.com/roikoren755/eslint-plugin-es/pull/136) [`1ba5438`](https://github.com/roikoren755/eslint-plugin-es/commit/1ba5438089f23b3035053385ce6eed245e1c5aba) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update typescript-eslint monorepo to v5.21.0
+
+- [#130](https://github.com/roikoren755/eslint-plugin-es/pull/130) [`e72bade`](https://github.com/roikoren755/eslint-plugin-es/commit/e72bade68c42d09396f8f9daca043e78593cb3de) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency lint-staged to v12.4.0
+
+* [#141](https://github.com/roikoren755/eslint-plugin-es/pull/141) [`b4eb26d`](https://github.com/roikoren755/eslint-plugin-es/commit/b4eb26d86f9d618e8174b86d9a14ee1659f218b4) Thanks [@roikoren755](https://github.com/roikoren755)! - chore: support node 18
+
+- [#129](https://github.com/roikoren755/eslint-plugin-es/pull/129) [`29400cf`](https://github.com/roikoren755/eslint-plugin-es/commit/29400cf3c15b316e4e8efecf5ea664195e48c29b) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update typescript-eslint monorepo to v5.20.0
+
+* [#134](https://github.com/roikoren755/eslint-plugin-es/pull/134) [`a89e965`](https://github.com/roikoren755/eslint-plugin-es/commit/a89e965b6e7880615072e59b661061a9972a84d3) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency eslint to v8.14.0
+
+- [#137](https://github.com/roikoren755/eslint-plugin-es/pull/137) [`b5d73a0`](https://github.com/roikoren755/eslint-plugin-es/commit/b5d73a0fb06a106772b880beeb87d2ab6088bb6f) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency lint-staged to v12.4.1
+
+* [#135](https://github.com/roikoren755/eslint-plugin-es/pull/135) [`22fc5a9`](https://github.com/roikoren755/eslint-plugin-es/commit/22fc5a931f771125a941f0617466f7ce3a516bd7) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update github/codeql-action action to v2
+
 ## 2.0.9
 
 ### Patch Changes

@@ -16,5 +16,5 @@ const p = Promise.allSettled(promises);
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.9/src/rules/no-promise-all-settled.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.9/tests/src/rules/no-promise-all-settled.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.10/src/rules/no-promise-all-settled.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.10/tests/src/rules/no-promise-all-settled.ts)
