@@ -26,7 +26,7 @@ jobs:
         run: npm ci
       - name: Create Release Pull Request or Publish to npm
         id: changesets
-        uses: changesets/action@v1.2.2
+        uses: changesets/action@v1.3.0
         with:
           title: 'ci(changesets): version packages'
           commit: 'ci(changesets): version packages'
