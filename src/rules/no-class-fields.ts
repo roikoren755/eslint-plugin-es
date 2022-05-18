@@ -26,11 +26,11 @@ const getFieldNameWithKind = (node: TSESTree.PropertyDefinition, sourceCode: TSE
   if (node.key.type === 'PrivateIdentifier') {
     tokens.push(`#${node.key.name}`);
   } else {
-    const name = ASTUtils.getPropertyName(node as unknown as TSESTree.MethodDefinition);
+    const name = ASTUtils.getPropertyName(node);
 
     if (name) {
       tokens.push(`'${name}'`);
-    } else if (sourceCode) {
+    } else {
       const keyText = sourceCode.getText(node.key);
 
       if (!keyText.includes('\n')) {

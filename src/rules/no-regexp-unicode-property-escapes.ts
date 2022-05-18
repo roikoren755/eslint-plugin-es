@@ -5,6 +5,18 @@ import { RegExpValidator } from 'regexpp';
 import { createRule } from '../util/create-rule';
 import { getRegExpCalls } from '../util/get-regexp-calls';
 
+const checkRegex = (pattern: string, flags: string): boolean => {
+  let found = false;
+
+  new RegExpValidator({
+    onUnicodePropertyCharacterSet() {
+      found = true;
+    },
+  }).validatePattern(pattern, 0, pattern.length, flags.includes('u'));
+
+  return found;
+};
+
 /**
  * Verify a given regular expression.
  * @param {TSESLint.RuleContext<'forbidden', []>} context The rule context to report.
@@ -20,15 +32,7 @@ const verify = (
   flags: string,
 ): void => {
   try {
-    let found = false;
-
-    new RegExpValidator({
-      onUnicodePropertyCharacterSet() {
-        found = true;
-      },
-    }).validatePattern(pattern, 0, pattern.length, flags.includes('u'));
-
-    if (found) {
+    if (checkRegex(pattern, flags)) {
       context.report({ node, messageId: 'forbidden' });
     }
   } catch (error) {
