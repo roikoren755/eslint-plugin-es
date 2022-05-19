@@ -24,10 +24,7 @@ export default createRule<[], 'forbidden'>({
      * @param {TSESTree.PropertyNonComputedName} node A `Property` node that has a `FunctionExpression` as its value
      * @returns {TSESLint.RuleFix} A fix for this node
      */
-    const makeFunctionLongform = (
-      fixer: TSESLint.RuleFixer,
-      node: TSESTree.PropertyNonComputedName,
-    ): TSESLint.RuleFix => {
+    const makeFunctionLongform = (fixer: TSESLint.RuleFixer, node: TSESTree.Property): TSESLint.RuleFix => {
       const firstKeyToken = node.computed
         ? sourceCode.getTokenBefore(node.key, ASTUtils.isOpeningBracketToken)
         : sourceCode.getFirstToken(node.key);
@@ -52,9 +49,7 @@ export default createRule<[], 'forbidden'>({
     };
 
     return {
-      'ObjectExpression > :matches(Property[method=true], Property[shorthand=true])'(
-        node: TSESTree.PropertyNonComputedName,
-      ) {
+      'ObjectExpression > :matches(Property[method=true], Property[shorthand=true])'(node: TSESTree.Property) {
         if (node.method || 'name' in node.key) {
           context.report({
             node,

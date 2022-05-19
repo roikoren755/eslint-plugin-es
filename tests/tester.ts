@@ -23,8 +23,8 @@ const ecmaVersion = getEcmaVersion();
 console.log('ECMAScript Version: %d', ecmaVersion);
 
 export const RuleTester = TSESLint.RuleTester as typeof TSESLint.RuleTester & {
-  setDefaultConfig(config: Partial<TSESLint.RuleTesterConfig>): void;
-  isSupported(targetEcmaVersion: number): boolean;
+  setDefaultConfig: (config: Partial<TSESLint.RuleTesterConfig>) => void;
+  isSupported: (targetEcmaVersion: number) => boolean;
 };
 
 RuleTester.setDefaultConfig({ parserOptions: { ecmaVersion, sourceType: 'script' }, globals: builtin });

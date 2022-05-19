@@ -57,7 +57,9 @@ export default createRule<[], 'forbidden'>({
     const sourceCode = context.getSourceCode();
 
     return {
-      'TaggedTemplateExpression, :not(TaggedTemplateExpression) > TemplateLiteral'(node: TSESTree.TemplateLiteral) {
+      'TaggedTemplateExpression, :not(TaggedTemplateExpression) > TemplateLiteral'(
+        node: TSESTree.TaggedTemplateExpression | TSESTree.TemplateLiteral,
+      ) {
         context.report({
           node,
           messageId: 'forbidden',

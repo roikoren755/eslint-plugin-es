@@ -18,7 +18,7 @@ export default createRule<[], 'forbidden'>({
   },
   defaultOptions: [],
   create(context) {
-    let stack: IStack | null = null;
+    let stack: IStack | undefined;
 
     return {
       Super(node) {
@@ -30,15 +30,13 @@ export default createRule<[], 'forbidden'>({
       ':matches(FunctionExpression, FunctionDeclaration)'(
         node: TSESTree.FunctionDeclaration | TSESTree.FunctionExpression,
       ) {
-        const { type, method } = node.parent as TSESTree.Property;
-
         stack = {
-          inObjectMethod: type === 'Property' && !!method,
+          inObjectMethod: node.parent?.type === 'Property' && !!node.parent.method,
           upper: stack as IStack,
         };
       },
       ':matches(FunctionExpression, FunctionDeclaration):exit'() {
-        stack = stack?.upper as IStack;
+        stack = stack?.upper;
       },
     };
   },

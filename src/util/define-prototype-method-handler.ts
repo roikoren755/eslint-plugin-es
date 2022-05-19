@@ -129,7 +129,8 @@ const isUnknown = (type: TypeScript.Type): boolean => (type.flags & (ts as TS).T
  * @returns {boolean} `true` if the type is `function`.
  */
 const isFunction = (type: TypeScript.Type): boolean => {
-  // eslint-disable-next-line no-bitwise
+  // type.symbol sometimes comes as undefined, even thought the type doesn't suggest that's the case
+  // eslint-disable-next-line no-bitwise,@typescript-eslint/no-unnecessary-condition
   if (type.symbol && (type.symbol.flags & ((ts as TS).SymbolFlags.Function | (ts as TS).SymbolFlags.Method)) !== 0) {
     return true;
   }
@@ -166,7 +167,7 @@ interface IOptions {
 }
 
 /**
- * Get the constraint type of a given type parameter type if exists.
+ * Get the constraint type for a given type parameter type if exists.
  *
  * `type.getConstraint()` method doesn't return the constraint type of the
  * type parameter for some reason. So this gets the constraint type via AST.
@@ -179,8 +180,9 @@ const getConstraintType = (
   type: TypeScript.TypeParameter,
   { checker }: Pick<IOptions, 'checker'>,
 ): TypeScript.Type | undefined => {
-  const { symbol } = type;
-  const declarations = symbol?.declarations;
+  const {
+    symbol: { declarations },
+  } = type;
   const declaration = declarations?.[0];
 
   if (declaration && ts?.isTypeParameterDeclaration(declaration) && declaration.constraint) {
@@ -345,11 +347,13 @@ export const definePrototypeMethodHandler = (
   const aggressive = getAggressiveOption(context, appliedOptions);
 
   const tsNodeMap = context.parserServices?.esTreeNodeToTSNodeMap;
+  // The types are wrong, and sometimes parserServices is an empty object
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
   const checker = context.parserServices?.program?.getTypeChecker();
 
   const isTS = Boolean(ts && tsNodeMap && checker);
   const hasFullType = isTS && context.parserServices?.hasFullTypeInformation !== false;
-  const options: IOptions = { aggressive, checker, hasFullType, isTS, tsNodeMap };
+  const options = { aggressive, checker, hasFullType, isTS, tsNodeMap };
 
   // For performance
   const nameMapEntries = Object.entries(nameMap);
