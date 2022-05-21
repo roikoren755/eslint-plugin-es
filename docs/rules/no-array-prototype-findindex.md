@@ -32,5 +32,5 @@ This is prior to the `settings.es.aggressive` setting.
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.10/src/rules/no-array-prototype-findindex.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.10/tests/src/rules/no-array-prototype-findindex.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.11/src/rules/no-array-prototype-findindex.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.11/tests/src/rules/no-array-prototype-findindex.ts)

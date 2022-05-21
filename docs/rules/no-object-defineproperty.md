@@ -16,5 +16,5 @@ Object.defineProperty(obj, 'prop', {});
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.10/src/rules/no-object-defineproperty.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.10/tests/src/rules/no-object-defineproperty.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.11/src/rules/no-object-defineproperty.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v2.0.11/tests/src/rules/no-object-defineproperty.ts)
