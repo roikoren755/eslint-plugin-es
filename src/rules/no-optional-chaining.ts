@@ -2,6 +2,13 @@ import type { TSESTree } from '@typescript-eslint/typescript-estree';
 
 import { createRule } from '../util/create-rule';
 
+/**
+ * Checks if the given token is a `?.` token or not.
+ * @param {Token} token The token to check.
+ * @returns {boolean} `true` if the token is a `?.` token.
+ */
+const isQuestionDotToken = (token: TSESTree.Token): boolean => token.value === '?.' && token.type === 'Punctuator';
+
 export const category = 'ES2020';
 export const typescript = true;
 export default createRule<[], 'forbidden'>({
@@ -15,17 +22,6 @@ export default createRule<[], 'forbidden'>({
   defaultOptions: [],
   create(context) {
     const sourceCode = context.getSourceCode();
-
-    /**
-     * Checks if the given token is a `?.` token or not.
-     * @param {Token} token The token to check.
-     * @returns {boolean} `true` if the token is a `?.` token.
-     */
-    const isQuestionDotToken = (token: TSESTree.Token): boolean =>
-      token.value === '?.' &&
-      (token.type === 'Punctuator' || // espree has been parsed well.
-        // espree@7.1.0 doesn't parse "?." tokens well. Therefore, get the string from the source code and check it.
-        sourceCode.getText(token as unknown as TSESTree.Node) === '?.');
 
     return {
       'CallExpression[optional=true]'(node: TSESTree.CallExpression) {
