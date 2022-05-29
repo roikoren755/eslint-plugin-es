@@ -191,7 +191,7 @@ module.exports = {
     'unicorn/prevent-abbreviations': OFF,
   },
   overrides: [
-    { files: ['./.commitlintrc.js', './.eslintrc.js', './.prettierrc.js'], rules: { 'no-undef': OFF } },
+    { files: ['./.eslintrc.js', './.prettierrc.js'], rules: { 'no-undef': OFF } },
     {
       files: ['./.eslintrc.js', './src/index.ts', './src/configs/*.ts'],
       rules: { '@typescript-eslint/naming-convention': OFF },
