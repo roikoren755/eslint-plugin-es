@@ -5,11 +5,7 @@ import { RuleTester } from '../../tester';
 
 const error = { messageId: 'forbidden' as const, line: 1, column: 1, type: AST_NODE_TYPES.MemberExpression, data: {} };
 
-if (!RuleTester.isSupported(2020)) {
-  console.log('Skip the tests of no-promise-all-settled.');
-} else {
-  new RuleTester().run('no-promise-all-settled', rule, {
-    valid: ['Promise.all'],
-    invalid: [{ code: 'Promise.allSettled', errors: [error] }],
-  });
-}
+new RuleTester().run('no-promise-all-settled', rule, {
+  valid: ['Promise.all'],
+  invalid: [{ code: 'Promise.allSettled', errors: [error] }],
+});

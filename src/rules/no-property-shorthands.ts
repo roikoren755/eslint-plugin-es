@@ -50,15 +50,13 @@ export default createRule<[], 'forbidden'>({
 
     return {
       'ObjectExpression > :matches(Property[method=true], Property[shorthand=true])'(node: TSESTree.Property) {
-        if (node.method || 'name' in node.key) {
-          context.report({
-            node,
-            messageId: 'forbidden',
-            fix: node.method
-              ? (fixer) => makeFunctionLongform(fixer, node)
-              : (fixer) => fixer.insertTextAfter(node.key, `: ${'name' in node.key ? node.key.name : ''}`),
-          });
-        }
+        context.report({
+          node,
+          messageId: 'forbidden',
+          fix: node.method
+            ? (fixer) => makeFunctionLongform(fixer, node)
+            : (fixer) => fixer.insertTextAfter(node.key, `: ${'name' in node.key ? node.key.name : ''}`),
+        });
       },
     };
   },
