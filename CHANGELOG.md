@@ -1,5 +1,25 @@
 # eslint-plugin-es-roikoren
 
+## 3.0.0
+
+### Major Changes
+
+- [#156](https://github.com/roikoren755/eslint-plugin-es/pull/156) [`8591236`](https://github.com/roikoren755/eslint-plugin-es/commit/85912366a04049bc4b60842d6a7ec16a9dcc2871) Thanks [@roikoren755](https://github.com/roikoren755)! - chore: drop node v12 support
+
+* [#162](https://github.com/roikoren755/eslint-plugin-es/pull/162) [`f11054b`](https://github.com/roikoren755/eslint-plugin-es/commit/f11054b49fe56c382d7f29565a3f50a1524e536b) Thanks [@roikoren755](https://github.com/roikoren755)! - chore: transpile typescript to es2020
+
+### Patch Changes
+
+- [#158](https://github.com/roikoren755/eslint-plugin-es/pull/158) [`1611ff6`](https://github.com/roikoren755/eslint-plugin-es/commit/1611ff6bbe57d291ae2209ebe156077b8a4cef02) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update typescript-eslint monorepo to v5.26.0
+
+* [#159](https://github.com/roikoren755/eslint-plugin-es/pull/159) [`cc8d421`](https://github.com/roikoren755/eslint-plugin-es/commit/cc8d421ed9bd6b5072d9bb98b73375bbe8eab067) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency lint-staged to v12.4.2
+
+- [#163](https://github.com/roikoren755/eslint-plugin-es/pull/163) [`1028d8f`](https://github.com/roikoren755/eslint-plugin-es/commit/1028d8fd3723698a5c786b592b5f0b1b84396a1b) Thanks [@roikoren755](https://github.com/roikoren755)! - chore: simplify tests
+
+* [#161](https://github.com/roikoren755/eslint-plugin-es/pull/161) [`2180fdb`](https://github.com/roikoren755/eslint-plugin-es/commit/2180fdbc5b709e3e5a7552e7b9bba22d71115bdc) Thanks [@renovate](https://github.com/apps/renovate)! - chore: remove commitlint
+
+- [#160](https://github.com/roikoren755/eslint-plugin-es/pull/160) [`3183b6f`](https://github.com/roikoren755/eslint-plugin-es/commit/3183b6ff006c44c507eb68ba0b7bdab725b9a640) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typescript to v4.7.2
+
 ## 2.0.11
 
 ### Patch Changes
