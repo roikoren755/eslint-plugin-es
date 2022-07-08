@@ -20,5 +20,5 @@ class A { async f5() {} }
 
 ## 📚 References
 
-- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v3.0.0/src/rules/no-async-functions.ts)
-- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v3.0.0/tests/src/rules/no-async-functions.ts)
+- [Rule source](https://github.com/roikoren755/eslint-plugin-es/blob/v3.0.1/src/rules/no-async-functions.ts)
+- [Test source](https://github.com/roikoren755/eslint-plugin-es/blob/v3.0.1/tests/src/rules/no-async-functions.ts)

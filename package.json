@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-es-roikoren",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/roikoren755/eslint-plugin-es.git"
