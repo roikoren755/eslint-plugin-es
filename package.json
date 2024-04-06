@@ -57,7 +57,7 @@
     "@typescript-eslint/utils": "5.27.1",
     "camelcase": "7.0.0",
     "@codechecks/client": "0.1.12",
-    "eslint": "8.17.0",
+    "eslint": "9.0.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-import-resolver-typescript": "2.7.1",
     "eslint-plugin-es-roikoren": "file:.",
