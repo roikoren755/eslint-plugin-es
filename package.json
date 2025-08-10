@@ -55,7 +55,7 @@
     "@typescript-eslint/types": "5.27.1",
     "@typescript-eslint/typescript-estree": "5.27.1",
     "@typescript-eslint/utils": "5.27.1",
-    "camelcase": "7.0.0",
+    "camelcase": "7.0.1",
     "@codechecks/client": "0.1.12",
     "eslint": "8.17.0",
     "eslint-config-prettier": "8.5.0",
